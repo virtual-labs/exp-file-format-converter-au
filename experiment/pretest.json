@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "First line of FASTA Sequence has",
+      "question": "1. First line of FASTA Sequence has",
       "answers": {
         "a": "Starting with > symbol followed by the description or identifier of the sequence",
         "b": "Starting with > symbol and description is optional",
@@ -14,7 +14,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "File extension for GenBank files",
+      "question": "2. File extension for GenBank files",
       "answers": {
         "a": ".genb",
         "b": ".gnb",
@@ -26,7 +26,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Identify the file formats having end of the sequence is marked by two slashes.",
+      "question": "3. Identify the file formats having end of the sequence is marked by two slashes.",
       "answers": {
         "a": "FASTA",
         "b": "FASTQ",
@@ -38,7 +38,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "EMBL refers to",
+      "question": "4. EMBL refers to",
       "answers": {
         "a": "European Molecular and Bioinformatics Laboratory",
         "b": "European Molecular Biology Laboratory",
@@ -50,7 +50,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Identify the given sequence; ATTGCCCAACCGTTCATGACCGG as a ",
+      "question": "5. Identify the given sequence; ATTGCCCAACCGTTCATGACCGG as a ",
       "answers": {
         "a": "RNA",
         "b": "Protein",
