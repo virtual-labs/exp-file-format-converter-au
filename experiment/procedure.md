@@ -4,6 +4,7 @@ The File Format Converter converts nucleotide file formats to Genbank to FASTA a
 
 &nbsp;
 ### GenBank to FASTA
+
 1.	Open the simulator to convert a biological sequence from one format to the other
 
 <img src="images/11.png" title="" />
