@@ -2,17 +2,18 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1. First line of FASTA Sequence has",
+      "question": "1. First line of FASTA Sequence begins with ",
       "answers": {
-        "a": "Starting with > symbol followed by the description or identifier of the sequence",
-        "b": "Starting with > symbol and description is optional",
-        "c": "Starting with '+'character and is optionally followed by the same sequence identifier",
-        "d": "Starting with @' character and is followed by a sequence identifier."
+        "a": "> symbol followed by the description or identifier of the sequence",
+        "b": "> symbol and description is optional",
+        "c": "+ character and is optionally followed by the same sequence identifier",
+        "d": "@ character and is followed by a sequence identifier"
       },
 
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
+    
     {
       "question": "2. File extension for GenBank files",
       "answers": {
@@ -25,6 +26,7 @@
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
+    
     {
       "question": "3. Identify the file formats having end of the sequence is marked by two slashes.",
       "answers": {
@@ -37,6 +39,7 @@
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
+    
     {
       "question": "4. EMBL refers to",
       "answers": {
@@ -49,6 +52,7 @@
       "correctAnswer": "b",
       "difficulty": "beginner"
     },
+    
     {
       "question": "5. Identify the given sequence; ATTGCCCAACCGTTCATGACCGG as a ",
       "answers": {
