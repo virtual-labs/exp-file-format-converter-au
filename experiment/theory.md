@@ -59,7 +59,7 @@ A FASTA file can contain multiple sequences. Each sequence will be separated by 
 
 Example:
 
-
+<img src="images/theory1.png" title="" />
 
 Figure 1: FASTA file format for the Akt1 mRNA sequence for the organism Danio rerio
 
@@ -90,7 +90,7 @@ A FASTQ file uses four lines per sequence:
 
 The Genbank format contains experimental information in addition to the DNA/protein sequence. It holds much more information than the FASTA format. A sequence file in GenBank format can contain several sequences. GenBank format starts with the word “LOCUS” line and is followed by other annotations. The start of the sequence is marked by a line containing "ORIGIN" and the end of the sequence is marked by two slashes ("//"). The Genbank file format is quite flexible and allows annotations, comments, and references to be included within the file. The file is plain text and thus can be read with a text editor. GenBank files often have the file extension '.gb' or '.genbank'.
 An example of GenBank sequence is shown below: 
-
+<img src="images/theory2.png" title="" />
 Figure 2: GenBank file format for the Akt1 mRNA sequence for the organism Danio rerio
 
 &nbsp;
@@ -104,7 +104,7 @@ EMBL format is almost similar to the Genbank file format. A sequence file in EMB
 
 An example of EMBL sequence is shown below:
  
-
+<img src="images/theory3.png" title="" />
  
 Figure 3: EMBL file format for the Akt1 mRNA sequence for the organism Danio rerio
 

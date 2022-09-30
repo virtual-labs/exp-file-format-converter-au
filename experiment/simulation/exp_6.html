@@ -51,7 +51,6 @@ div {
 		<label for="myfile">Upload the file:</label>
 		<input type="file" id="file", accept=".txt" required  multiple />
 		<br>
-		<p id = "outputBx"></p>
 		
 		<br>
 	
@@ -93,7 +92,7 @@ div {
 				document.getElementById("Filefrom-name").value= "EMBL";
 			}
 			else {
-				alert("Please input a genbank or fasta format");
+				alert("Please input a GenBank or EMBL format");
 			}
 		}
     }
@@ -109,12 +108,12 @@ div {
     		//document.getElementById("demo").innerHTML = seq;
     		const array= seq.split("\n");
 			if (array[0].includes('LOCUS')){
-				document.getElementById("Filefrom-name").value= "GENBANK";
+				//document.getElementById("Filefrom-name").value= "GENBANK";
 				if(document.getElementById("Fileto-name"). value== "fasta"){
 					let definition= array[1];
     				let newDefinition = definition.replace("DEFINITION", "");
 					newDefinition = newDefinition.replace(/(\r\n|\n|\r)/gm, "");
-					newDefinition = newDefinition.replace(/\s/g, "");
+					newDefinition = newDefinition.replace(/\s/, "");
     				//document.getElementById("demo").innerHTML = newDefinition;
 
     				let version= array[3];
@@ -155,32 +154,43 @@ div {
 					document.getElementById("result").innerHTML =("<h3> Results</h3>"+"\n"+gen_fasta);
 					//document.getElementById("result").innerHTML =gen_fasta;
 				
-				};
+				}
+				else if(document.getElementById("Fileto-name"). value== "embl"||"genbank"){
+					alert("Required file format can be only fasta format");	
+				}
+				
 			}
 			else if(array[0].includes('ID')){
 				document.getElementById("Filefrom-name").value= "EMBL";
-				let orgmid= array[1];
-    			let newOrgmid = orgmid.replace("AC   ", "");
-    			//document.getElementById("demo").innerHTML =newOrgmid;
-    			let acid = newOrgmid.substring(0,6);
-    			let count = (newOrgmid.match(/;/g) || []).length;
-				//document.getElementById("demo").innerHTML =count;
+				if(document.getElementById("Fileto-name"). value== "fasta"){
+    				const seq1=[];
+    				var len1= array.length;
+  					//document.getElementById("demo").innerHTML = array[2];
+  					for (let i=0; i<=len1; i++){
+						let temp=array[i].split(" ");
+						//document.getElementById("demo").innerHTML =temp;
+						if (temp.includes('AC')){
+							//document.getElementById("demo").innerHTML =temp;
+							var newOrgmid = array[i].replace("AC ","");
+    						//document.getElementById("demo").innerHTML =newOrgmid;
+							newOrgmid = newOrgmid .replace(/\s/g, "");
+							
+							
+    						var acid = newOrgmid.substring(0,(newOrgmid.search(/;/)));
+							//document.getElementById("demo").innerHTML =acid;
+    						var count = (newOrgmid.match(/;/g) || []).length;
+						}
+						else if(temp.includes('DE')){
+							var newDE = array[i].replace("DE","");
+    						newDE = newDE.replace(/(\r\n|\n|\r)/gm, "");
+							newDE = newDE.replace(/\s/, "");
+    						//document.getElementById("demo").innerHTML =newDE;
+						}
+  						else if (temp.includes('SQ')){
+  							var k=0;
+  							//document.getElementById("demo").innerHTML = i;
 
-				let de= array[5];
-    			let newDE = de.replace("DE   ", "");
-    			newDE = newDE.replace(/(\r\n|\n|\r)/gm, "");
-				newDE = newDE.replace(/\s/g, "");
-    			//document.getElementById("demo").innerHTML =newDE;
-
-    			const seq1=[];
-    			var len1= array.length;
-  				//document.getElementById("demo").innerHTML = len1;
-  				for (let i=0; i<=len1; i++){
-  					if (array[i].includes('SQ')){
-  						var k=0;
-  					//document.getElementById("demo").innerHTML = i;
-
-  					for (let j=i+1; j<len1-1; j++){
+  							for (let j=i+1; j<len1-1; j++){
   								//document.getElementById("demo").innerHTML = j;
   								seq1[k]= array[j];
   								k=k+1;
@@ -188,27 +198,30 @@ div {
   								//document.getElementById("demo").innerHTML =sequence.length;		
 							}
 							break;
+  						}
+
   					}
-
-  				}
-  				var seqLen1=seq1.length;
-  				var newSeq1= [];
-  			 	//document.getElementById("demo").innerHTML =newSeq1;
-  			 	for (let n=0; n<seqLen1; n++){
-  					newSeq1[n]= seq1[n].replace(/\s/g, "");
-  					//document.getElementById("demo").innerHTML =newSeq1;
+  					var seqLen1=seq1.length;
+  					var newSeq1= [];
+  			 		//document.getElementById("demo").innerHTML =newSeq1;
+  			 		for (let n=0; n<seqLen1; n++){
+  						newSeq1[n]= seq1[n].replace(/\s/g, "");
+  						//document.getElementById("demo").innerHTML =newSeq1;
 					}
-				var newEmbl= newSeq1.join('\n');
-				//document.getElementById("demo").innerHTML =newEmbl;
-				const embl_fasta='>|'+acid+'.'+count+'|'+ newDE +'\n'+newEmbl;
-				document.getElementById("result").innerHTML =("<h3> Results</h3>"+"\n"+embl_fasta);
-
+					var newEmbl= newSeq1.join('\n');
+					newEmbl= newEmbl.replace(/\d/g, '');
+					newEmbl=newEmbl.toUpperCase();
+					//document.getElementById("demo").innerHTML =newDE;
+					const embl_fasta='>|'+ acid+'.'+ count+'|'+ newDE +'\n'+newEmbl;
+					document.getElementById("result").innerHTML =("<h3> Results</h3>"+"\n"+embl_fasta);
+				}
+				else if(document.getElementById("Fileto-name"). value== "embl"||"genbank"){
+					alert("Required file format can be only fasta format");	
+				}
 
 			}
 		}
 	}
-
-
 
 </script>
 
