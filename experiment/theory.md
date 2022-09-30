@@ -59,7 +59,7 @@ A FASTA file can contain multiple sequences. Each sequence will be separated by 
 
 Example:
 
-
+<img src="images/theory1.png" title="" />
 
 Figure 1: FASTA file format for the Akt1 mRNA sequence for the organism Danio rerio
 
