@@ -26,7 +26,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Identify the file formats having end of the sequence marked by two slashes ("//").",
+      "question": "Identify the file formats having end of the sequence is marked by two slashes.",
       "answers": {
         "a": "FASTA",
         "b": "FASTQ",
