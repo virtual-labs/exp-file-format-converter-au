@@ -4,8 +4,8 @@
     {
       "question": "1. In GenBank format, the sequence starts with:",
       "answers": {
-        "a": "A line with two slashes ("//")",
-        "b": "A line containing "ORIGIN"",
+        "a": "A line with two slashes (//)",
+        "b": "A line containing ORIGIN",
         "c": "A line containing greater than symbol (>)",
         "d": "A line containing a '@' character"
       },
