@@ -25,6 +25,7 @@ With this experiment, the user can
 
 SrNo | Name | Faculty or Student | Department| Institute | Email id
 :--|:--|:--|:--|:--|:--|
-1 | Dhanush Kumar | Faculty | Amrita Mind Brain Center | Amrita Vishwa Vidyapeetham | dhanushkumar@am.amrita.edu
-2 | Anandhu Presannan| Faculty | Amrita Mind Brain Center | Amrita Vishwa Vidyapeetham | anandhupresannan@am.amrita.edu
-  
+1 | Dr. Asha Vijayan | Faculty | Amrita School of Biotechnology | Amrita Vishwa Vidyapeetham | ashavijayan@am.amrita.edu
+2 | Rakhi Radhamani | Research Assistant | Amrita Virtual Labs | Amrita Vishwa Vidyapeetham | rakhir@am.amrita.edu
+3 | Sreelekshmi S | Research Assistant | Amrita Virtual Labs | Amrita Vishwa Vidyapeetham | sreelekshmis@am.amrita.edu 
+4 | Nijin N | Research Assistant | Amrita Virtual Labs | Amrita Vishwa Vidyapeetham | nijinn@am.amrita.edu
