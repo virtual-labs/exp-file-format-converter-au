@@ -8,7 +8,12 @@
 
 ### About the Experiment 
 
-Labeled specific antibodies are widely used in immunoassays to track the protein of interest.Flourescent labeling of antibodies explains the technique to label a protein or antibody with fluorescent markers
+The goal of proposed virtual laboratories is to achieve a conceptual understanding of standard protocols and tools in biotechnology and biomedical engineering at an advanced level that may be useful in interdisciplinary fields of science and technology.
+  
+With this experiment, the user can
+  1. Learn most popular file formats used in bioinformatics for representing a biological sequence.
+  2. Covert format of a given biological sequence to another format for performing various tasks in bioinformatics.
+
 
 <b>Name of Developer | <b> Dr. Shyam Diwakar
 :--|:--|
