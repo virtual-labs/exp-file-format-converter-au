@@ -2,38 +2,57 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "1. In GenBank format, the sequence starts with:",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "A line with two slashes ("//")",
+        "b": "A line containing "ORIGIN"",
+        "c": "A line containing greater than symbol (>)",
+        "d": "A line containing a '@' character"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
+      
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "2. If the plaque assay serial dilution factor is too low:  ",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "There will be too few bacteria cells lysed to accurately count",
+        "b": "The plaques will fuse, lysing the entire culture",
+        "c": "Nothing will happen",
+        "d": "None of the bacteria will be lysed"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+
+    {
+      "question": "3. A plaque assay detects the number of __________",
+      "answers": {
+        "a": "Bacterial auxotrophs",
+        "b": "Dental cavities",
+        "c": "Bacterial viruses",
+        "d": "Bacterial prototrophs"
       },
+          
       "correctAnswer": "c",
       "difficulty": "beginner"
-    }
+    },
+
+      {
+        "question": "4. Forty-eight (48) plaques were counted in a plate when 0.1 ml of bacteriophage-infected bacteria from 10¯⁶ dilution (10 ml culture) was plated. The original bacteriophage density was: ",
+        "answers": {
+          "a": "4.8 X 10⁶",
+          "b": "48 X 10¯⁶",
+          "c": "4.8X 10¯ ⁷",
+          "d": "48 X 10⁷"
+        },
+
+            
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    }   
+     
+    
   ]
 }
