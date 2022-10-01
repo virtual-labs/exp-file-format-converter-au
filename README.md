@@ -3,8 +3,8 @@
 
 <b>Discipline | <b> Biotechnology and Biomedical engineering
 :--|:--|
-<b> Lab | <b> Immunology Virtual Lab II
-<b> Experiment|     <b> Fluorescent Labeling of Antibodies
+<b> Lab | <b> Bioinformatics and Computational Biology
+<b> Experiment|     <b> 7.	Conversion of sequence from one database format to another using file format converter
 
 ### About the Experiment 
 
