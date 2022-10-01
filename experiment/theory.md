@@ -61,13 +61,13 @@ Example:
 
 <img src="images/theory1.png" title="" />
 
-<b> Figure 1: FASTA file format for the Akt1 mRNA sequence for the organism Danio rerio </b>
+ Figure 1: FASTA file format for the Akt1 mRNA sequence for the organism Danio rerio 
 
 &nbsp;
 &nbsp;
 
 
-** 2.	FASTQ FORMAT**
+**2.	FASTQ FORMAT**
 
 The FASTQ format is also a text-based format to represent nucleotide sequences, but also contains the corresponding quality of each nucleotide. It is the standard for storing the output of high-throughput sequencing instruments such as the Illumina machines.
 An example sequence in FASTQ format:
@@ -94,7 +94,7 @@ A FASTQ file uses four lines per sequence:<br>
 &nbsp;
 &nbsp;
 
-** 3.	GENBANK FILE FORMAT**
+**3.	GENBANK FILE FORMAT**
 
 The Genbank format contains experimental information in addition to the DNA/protein sequence. It holds much more information than the FASTA format. A sequence file in GenBank format can contain several sequences. GenBank format starts with the word “LOCUS” line and is followed by other annotations. The start of the sequence is marked by a line containing "ORIGIN" and the end of the sequence is marked by two slashes ("//"). The Genbank file format is quite flexible and allows annotations, comments, and references to be included within the file. The file is plain text and thus can be read with a text editor. GenBank files often have the file extension '.gb' or '.genbank'.
 An example of GenBank sequence is shown below: 
@@ -102,7 +102,7 @@ An example of GenBank sequence is shown below:
 <img src="images/theory2.png" title="" />
 
 
-<b> Figure 2: GenBank file format for the Akt1 mRNA sequence for the organism Danio rerio</b>
+ Figure 2: GenBank file format for the Akt1 mRNA sequence for the organism Danio rerio
 
 &nbsp;
 &nbsp;
@@ -120,7 +120,7 @@ An example of EMBL sequence is shown below:
  
  
  
-<b> Figure 3: EMBL file format for the Akt1 mRNA sequence for the organism Danio rerio</b>
+Figure 3: EMBL file format for the Akt1 mRNA sequence for the organism Danio rerio
 
 Explanation:
 
@@ -182,3 +182,30 @@ Explanation:
 
 3. SFF(Standard flowgram format) - binary file format
 
+&nbsp;
+
+<b>List of Abbreviations</b>
+   
+Deoxyribonucleic acid - DNA
+
+Ribonucleic acid - RNA  
+
+European Molecular Biology Laboratory - EMBL
+
+European Bioinformatics Institute -EBI
+
+DNA Data Bank of Japan - DDBJ
+
+Protein Data Bank –PDB
+
+Protein Information Resource -PIR
+
+Next-generation sequencing -NGS
+
+Sequence Alignment and Map -SAM
+
+Binary Alignment and Map -BAM
+
+General Feature Format -GFF
+
+National Biomedical Research Foundation -NBRF
