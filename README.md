@@ -4,7 +4,7 @@
 <b>Discipline | <b> Biotechnology and Biomedical engineering
 :--|:--|
 <b> Lab | <b> Bioinformatics and Computational Biology
-<b> Experiment|     <b> 7.	Conversion of sequence from one database format to another using file format converter
+<b> Experiment|     <b> Conversion of sequence from one database format to another using file format converter
 
 ### About the Experiment 
 
