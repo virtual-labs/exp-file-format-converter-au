@@ -2,38 +2,44 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "1.  The science that is concerned with the study of fungi is known as ________",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Phycology",
+        "b": "Pedology",
+        "c": "Mycology",
+        "d": "Etymology"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
-      },
-      "correctAnswer": "a",
+      
+      "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "2. Which of the following describe fungi ? ",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Eukaryotic heterotrophs",
+        "b": "Prokaryotic heterotrophs",
+        "c": "Eukaryotic autotrophs",
+        "d": "Prokaryotic autotrophs"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+
+    {
+      "question": "3. The interaction of fungi cannot be _______.",
+      "answers": {
+        "a": "Parasitic",
+        "b": "Saprophytic",
+        "c": "Commensalic",
+        "d": "Mutualistic"
       },
+          
       "correctAnswer": "c",
       "difficulty": "beginner"
     }
+
+      
+    
   ]
 }
