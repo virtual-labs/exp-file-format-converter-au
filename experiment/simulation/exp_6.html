@@ -285,12 +285,11 @@ table, th, td {
 					document.getElementById("result").innerHTML =("<h1> Results</h1>"+"\n"+"<textarea id=\"res\" cols=\"63\" rows=\"25\">"+ embl_fasta+"</textarea><a href=\"\" download=\"result.txt\"><br><br>Download Result</a>");
 					var textcontent = document.getElementById("res").value;
 					var downloadableLink = document.createElement('a');
-					var textFileAsBlob = new Blob(textcontent, {type:'text/plain'}); 
-					downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
-    				downloadLink.onclick = destroyClickedElement;
-    				downloadLink.style.display = "none";
+					downloadableLink.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(textcontent));
+					downloadableLink.download = "result" + ".txt";
 					document.body.appendChild(downloadableLink);
 					downloadableLink.click();
+					document.body.removeChild(downloadableLink);
 					
 				}
 				else if(document.getElementById("Fileto-name"). value== "embl"||"genbank"){
