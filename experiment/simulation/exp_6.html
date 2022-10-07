@@ -286,9 +286,11 @@ table, th, td {
 					var textcontent = document.getElementById("res").value;
 					
 					var downloadableLink = document.createElement('a');
-					downloadableLink.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(textcontent));
+					var textFileAsBlob = new Blob(textcontent, {type:'text/plain'});
+					//downloadableLink.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(textcontent));
 					
-					downloadableLink.download = "result" + ".txt";
+					//downloadableLink.download = "result" + ".txt";
+					downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
 					downloadLink.onclick = destroyClickedElement;
 					document.body.appendChild(downloadableLink);
 					downloadableLink.click();
