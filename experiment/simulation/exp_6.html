@@ -283,12 +283,12 @@ table, th, td {
 					//document.getElementById("demo").innerHTML =newDE;
 					const embl_fasta='>|'+ acid+'.'+ count+'|'+ newDE +'\n'+newEmbl;
 					document.getElementById("result").innerHTML =("<h1> Results</h1>"+"\n"+"<textarea id=\"res\" cols=\"63\" rows=\"25\">"+ embl_fasta+"</textarea><a href=\"\" download=\"result.txt\"><br><br>Download Result</a>");
-					var textcontent = document.getElementById("res").value;
+					//var textcontent = document.getElementById("res").value;
 					var textFileAsBlob = new Blob(textcontent, {type:'text/plain'});
 
 					var downloadableLink = document.createElement('a');
 
-					var textFileAsBlob = new Blob([textcontent], {type:'text/plain'});
+					var textFileAsBlob = new Blob(document.getElementById("res").value, {type:'text/plain'});
 					//downloadableLink.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(textcontent));
 					
 					//downloadableLink.download = "result" + ".txt";
