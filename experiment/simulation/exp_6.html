@@ -222,7 +222,7 @@ table, th, td {
 					const gen_fasta='>|'+newVersion+'|'+ newDefinition+'\n'+newstr;
 					//document.getElementById("result").innerHTML =("<h1> Results</h1>"+"\n"+"<textarea cols=\"63\" rows=\"25\">"+ gen_fasta +"	</textarea>");
 					//document.getElementById("result").innerHTML =gen_fasta;
-					document.getElementById("result").innerHTML =("<h1> Results</h1>"+"\n"+"<textarea id=\"res\" cols=\"63\" rows=\"25\">"+ gen_fasta+"</textarea> <br><br><br> <button onclick=saveTextAsFile(res.value,'Sample_Genbank.txt')>Download Result</button>");
+					document.getElementById("result").innerHTML =("<h1> Results</h1>"+"\n"+"<textarea id=\"res\" cols=\"63\" rows=\"25\">"+ gen_fasta+"</textarea> <br><br><br> <button onclick=saveTextAsFile(res.value,'"+newVersion+"_Genbank.txt')>Download result</button>");
 				}
 				else if(document.getElementById("Fileto-name"). value== "embl"||"genbank"){
 					alert("Required file format can be only fasta format");	
@@ -282,7 +282,8 @@ table, th, td {
 					newEmbl=newEmbl.toUpperCase();
 					//document.getElementById("demo").innerHTML =newDE;
 					const embl_fasta='>|'+ acid+'.'+ count+'|'+ newDE +'\n'+newEmbl;
-					document.getElementById("result").innerHTML =("<h1> Results</h1>"+"\n"+"<textarea id=\"res\" cols=\"63\" rows=\"25\">"+ embl_fasta+"</textarea> <br><br><br> <button onclick=saveTextAsFile(res.value,'Sample_EMBL.txt')>Download Result</button>");
+					document.getElementById("result").innerHTML =("<h1> Results</h1>"+"\n"+"<textarea id=\"res\" cols=\"63\" rows=\"25\">"+ embl_fasta+"</textarea> <br><br><br> <button onclick=saveTextAsFile(res.value,'"+ acid +"_EMBL.txt')>Download result</button>");
+
 					/*document.getElementById("result").innerHTML =("<h1> Results</h1>"+"\n"+"<textarea id=\"res\" cols=\"63\" rows=\"25\">"+ embl_fasta+"</textarea><a href=\"\" download=\"result.txt\"><br><br>Download Result</a>");
 					//var textcontent = document.getElementById("res").value;
 					var textFileAsBlob = new Blob(textcontent, {type:'text/plain'});
