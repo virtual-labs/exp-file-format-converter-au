@@ -25,24 +25,20 @@ input[type=button]{
 input[type=button]:hover {
   background-color: #3E0719;
 }
-h4 {
-  text-align: center;
+hr 
+{
+        position: relative;
+        top: 20px;
+        border: none;
+        height: 2px;
+        background: #d737a5;
+        margin-bottom: 50px;
 }
 
-div {
-	text-align: center;
+table, th, td {
+  border:0px ;
 }
-.button-link {
-  font: bold 11px Arial;
-  text-decoration: none;
-  background-color: #EEEEEE;
-  color: #333333;
-  padding: 2px 6px 2px 6px;
-  border-top: 1px solid #CCCCCC;
-  border-right: 1px solid #333333;
-  border-bottom: 1px solid #333333;
-  border-left: 1px solid #CCCCCC;
-}
+
 </style>
 
 <head>
@@ -51,51 +47,76 @@ div {
 	<title><b>FILE FORMAT CONVERSTION</b></title>
 	
 
-
-
 </head>
 
 <body>
 	<p id="demo"></p>
 
-
 	<form id="myform"   >
 
-		
-		<label for="myfile">Upload the file:</label>
-		<input type="file" id="file", accept=".txt" required  multiple onchange="obtainfiletype()"/>
-		<br>
-		<textarea cols="100" rows="10"
-			placeholder="text will appear here">
-		</textarea>
+		<table align="center">
+			<tr>
+				<td>
+					<label for="myfile">Upload the file:</label>
+					<br><br>
+					<input type="file" id="file", accept=".txt" required  multiple onchange="obtainfiletype()"/>
+				</td>
+				<td>			
+					<textarea cols="100" rows="10" placeholder="text will appear here">
+					</textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>Sample files :</p>
+				</td>
+				<td>
+					<br>
+					<br>
+					<a href="Proto-oncogene vav_genebank.txt" download="sample_genbank.txt">Sample_Genbank</a>
+					<a href="Proto-oncogene vav_embl.txt" download="sample_embl.txt">Sample_EMBL</a>
+					<a href="Proto-oncogene vav_fasta.txt" download="sample_fasta.txt">Sample_FASTA</a>
+					<p>Click on the sample file, when opened copy the entire content into a notepad and save as sample.txt. Refresh and load the file</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="File from">Convert file from:</label>
+				</td>
+				<td>
+					<select name="Filefrom-name" id="Filefrom-name">
+						<option value="EMBL">EMBL</option>
+				   		<option value="GENBANK">GENBANK</option> 
+			 		</select>
+				</td>	
+			</tr>
+			<tr>
+				<td>
+					<label for="File to">Required file format:</label>
+				</td>
+				<td>
+					<select name="Fileto-name" id="Fileto-name">
+						<option value="embl">EMBL</option>
+						<option value="genbank">GENBANK</option> 
+						<option value="fasta">FASTA</option> 
+					</select>
+				</td>	
+			</tr>
 
+		</table>
 		<br>
-		
-		<p>Sample files :</p>
-		<a href="Proto-oncogene vav_genebank.txt" download="sample_genbank.txt">Sample_Genbank</a>
-		<a href="Proto-oncogene vav_embl.txt" download="sample_embl.txt">Sample_EMBL</a>
-		<a href="Proto-oncogene vav_fasta.txt" download="sample_fasta.txt">Sample_FASTA</a>
-		<p>Click on the sample file, when opened copy the entire content into a notepad and save as sample.txt. Refresh and load the file</p>
-		<br>
-		<br>
-		<label for="File from">Convert file from:</label>
-		<select name="Filefrom-name" id="Filefrom-name">
-	   		<option value="EMBL">EMBL</option>
-  			<option value="GENBANK">GENBANK</option> 
-		</select>	
-		<br>
+		<table style="width:30%" align="center">
+			<tr>
+				<td>
+					<input type="button" onclick="output(myform.file)" value="Submit" >
+				</td>
+			</tr>
+		</table>
 
- 		<label for="File to">Required file format:</label>
-		<select name="Fileto-name" id="Fileto-name">
-			<option value="embl">EMBL</option>
-  			<option value="genbank">GENBANK</option> 
-  			<option value="fasta">FASTA</option> 
-		</select>
 	
-	 	<input type="button" onclick="output(myform.file)" value="Submit" >
 	</form><br><br>
-
-	<pre id="result"></pre>
+	<hr />
+	<pre id="result" align="center"></pre>
 
 <script>
 	
@@ -121,66 +142,6 @@ div {
     reader2.readAsText(file);
 	});
 
-	/*let samp=document.querySelector('a')
-	samp.addEventListener('onclick', () => {
-    	let files = input.files;
-    	if (files.length == 0) return;
-		const file = files[0];
- 
-    	let reader2 = new FileReader();
-		reader2.onload = (e) => {
-        const file = e.target.result;
- 
-        // This is a regular expression to identify carriage
-        // Returns and line breaks
-        const lines = file.split(/\r\n|\n/);
-        textarea.value = lines.join('\n');
- 
-    };
-    reader2.onerror = (e) => alert(e.target.error.name);
-    reader2.readAsText(file);
-});*/
-
-		/*var text= "Danio-akt1_genbank.txt"
-		var download = document.querySelector( "a[ download ]" );
-		
-		let filhand = new FileReader();
-		filhand.readAsText(text);
-		//document.getElementById("demo").innerHTML = filhand.readAsText(text);
-		var sam_gen 
-		filhand.onload = function() {
-    		//document.getElementById("demo").innerHTML = reader.result;
-			sam_gen = filhand.result;
-		}
-		document.getElementById("demo").innerHTML = filhand.result;
-		download.setAttribute(
-					"href",
-					( "data:text/plain;charset=utf-8," + encodeURIComponent( sam_gen) )
-				);
-
-*/
-
-
-       
-	function myFunction(){
-		//document.getElementById('demo').innerHTML=done;
-		//document.getElementById('inputfile').value = "C:/Users/Asha vijayan/OneDrive - Amrita university/vlab/Compbio/vlab_new_expt/Danio-akt1_genbank.txt";
-		document.getElementById('demo').innerHTML="done";
-		let filhand = new FileReader();
-		
-		filhand.onload = function() {
-    		//document.getElementById("demo").innerHTML = reader.result;
-			document.getElementById('demo')
-                        .textContent = filhand.result;
-		}
-		filhand.readAsText(document.getElementById('sample').value);
-		//document.getElementById("demo").innerHTML = filhand.result;
-
-		var data = new Blob(filhand.result, {type: 'text/plain'});
-		var url = window.URL.createObjectURL(data);
-		document.getElementById('sample').href = url;
-
-	}
 
 	function obtainfiletype(){
 	
@@ -259,7 +220,7 @@ div {
   					var newstr= newOrigin.replace(/\d/g, '');
 					newstr=newstr.toUpperCase();
 					const gen_fasta='>|'+newVersion+'|'+ newDefinition+'\n'+newstr;
-					document.getElementById("result").innerHTML =("<h3> Results</h3>"+"\n"+gen_fasta);
+					document.getElementById("result").innerHTML =("<h1> Results</h1>"+"\n"+"<textarea cols=\"63\" rows=\"25\">"+ gen_fasta +"	</textarea>");
 					//document.getElementById("result").innerHTML =gen_fasta;
 				
 				}
@@ -321,7 +282,16 @@ div {
 					newEmbl=newEmbl.toUpperCase();
 					//document.getElementById("demo").innerHTML =newDE;
 					const embl_fasta='>|'+ acid+'.'+ count+'|'+ newDE +'\n'+newEmbl;
-					document.getElementById("result").innerHTML =("<h3> Results</h3>"+"\n"+embl_fasta);
+					document.getElementById("result").innerHTML =("<h1> Results</h1>"+"\n"+"<textarea id=\"res\" cols=\"63\" rows=\"25\">"+ embl_fasta+"</textarea><a href=\"\" download=\"result.txt\"><br><br>Download Result</a>");
+					var textcontent = document.getElementById("res").value;
+					var downloadableLink = document.createElement('a');
+					var textFileAsBlob = new Blob(textcontent, {type:'text/plain'}); 
+					downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+    				downloadLink.onclick = destroyClickedElement;
+    				downloadLink.style.display = "none";
+					document.body.appendChild(downloadableLink);
+					downloadableLink.click();
+					
 				}
 				else if(document.getElementById("Fileto-name"). value== "embl"||"genbank"){
 					alert("Required file format can be only fasta format");	
