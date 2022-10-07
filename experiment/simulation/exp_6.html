@@ -287,9 +287,7 @@ table, th, td {
 					var downloadableLink = document.createElement('a');
 					var textFileAsBlob = new Blob(textcontent, {type:'text/plain'}); 
 					downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
-    				downloadLink.onclick = destroyClickedElement;
-    				downloadLink.style.display = "none";
-					document.body.appendChild(downloadableLink);
+    					document.body.appendChild(downloadableLink);
 					downloadableLink.click();
 					
 				}
