@@ -282,11 +282,14 @@ table, th, td {
 					newEmbl=newEmbl.toUpperCase();
 					//document.getElementById("demo").innerHTML =newDE;
 					const embl_fasta='>|'+ acid+'.'+ count+'|'+ newDE +'\n'+newEmbl;
-					document.getElementById("result").innerHTML =("<h1> Results</h1>"+"\n"+"<textarea id=\"res\" cols=\"63\" rows=\"25\">"+ embl_fasta+"</textarea><a href=\"\" download=\"result.txt\"><br><br>Download Result</a>");
+					document.getElementById("result").innerHTML =("<h1> Results</h1>"+"\n"+"<textarea id=\"res\" cols=\"63\" rows=\"25\">"+ embl_fasta+"</textarea>");
 					var textcontent = document.getElementById("res").value;
+					
 					var downloadableLink = document.createElement('a');
 					downloadableLink.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(textcontent));
+					document.getElementById("result").innerHTML =("<br><br>Download Result");
 					downloadableLink.download = "result" + ".txt";
+					downloadLink.onclick = destroyClickedElement;
 					document.body.appendChild(downloadableLink);
 					downloadableLink.click();
 					document.body.removeChild(downloadableLink);
