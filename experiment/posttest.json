@@ -2,40 +2,53 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1.  The science that is concerned with the study of fungi is known as ________",
+      "question": "1. Identify the FASTA file format from the given formats.",
       "answers": {
-        "a": "Phycology",
-        "b": "Pedology",
-        "c": "Mycology",
-        "d": "Etymology"
-      },
-      
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "2. Which of the following describe fungi ? ",
-      "answers": {
-        "a": "Eukaryotic heterotrophs",
-        "b": "Prokaryotic heterotrophs",
-        "c": "Eukaryotic autotrophs",
-        "d": "Prokaryotic autotrophs"
+        "a": ">KX580312.1 Homo sapiens truncated breast cancer 1 (BRCA1) gene, exon 15 and partial \n GTCATCCCCTTCTAAATGCCCATCATTAGATGATAGGTGGTACATGCACAGTTGCTCTGGGAG",
+        "b": "< KX580312.1 Homo sapiens truncated breast cancer 1 (BRCA1) gene, exon 15 and partial \n GTCATCCCCTTCTAAATGCCCATCATTAGATGATAGGTGGTACATGCACAGTTGCTCTGGGAG",
+        "c": "//KX580312.1 Homo sapiens truncated breast cancer 1 (BRCA1) gene, exon 15 and partial \n GTCATCCCCTTCTAAATGCCCATCATTAGATGATAGGTGGTACATGCACAGTTGCTCTGGGAG",
+        "d": "//KX580312.1 Homo sapiens truncated breast cancer 1 (BRCA1) gene, exon 15 and partial \n GTCATCCCCTTCTAAATGCCCATCATTAGATGATAGGTGGTACATGCACAGTTGCTCTGGGAG//"
       },
       
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
+    {
+      "question": "2. In GenBank format, the sequence begins from ",
+      "answers": {
+        "a": "the line with two slashes (\"//\")",
+        "b": "the next line containing \"ORIGIN\"",
+        "c": "the line containing greater than symbol (>)",
+        "d": "the line containing \"ORIGIN\""
+      },
+      
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
 
     {
-      "question": "3. The interaction of fungi cannot be _______.",
+      "question": "3. SQ tag is found in which of the following sequence format?",
       "answers": {
-        "a": "Parasitic",
-        "b": "Saprophytic",
-        "c": "Commensalic",
-        "d": "Mutualistic"
+        "a": "FASTA",
+        "b": "GENBANK",
+        "c": "EMBL",
+        "d": "FASTQ"
       },
           
       "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+
+    {
+      "question": "4.	Which among these databases is not considered a nucleic acid sequence database?",
+      "answers": {
+        "a": "DDBJ",
+        "b": "EMBL",
+        "c": "GenBank",
+        "d": "FASTQ"
+      },
+          
+      "correctAnswer": "d",
       "difficulty": "beginner"
     }
 
