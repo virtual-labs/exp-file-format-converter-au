@@ -12,6 +12,18 @@
       
       "correctAnswer": "a",
       "difficulty": "beginner"
+    },
+    {
+      "question": "2. In GenBank format, the sequence begins from ",
+      "answers": {
+        "a": "the line with two slashes (\"//\")",
+        "b": "the next line containing \"ORIGIN\"",
+        "c": "the line containing greater than symbol (>)",
+        "d": "the line containing \"ORIGIN\""
+      },
+      
+      "correctAnswer": "b",
+      "difficulty": "beginner"
     }
 
       
