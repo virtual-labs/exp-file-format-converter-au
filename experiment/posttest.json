@@ -24,6 +24,19 @@
       
       "correctAnswer": "b",
       "difficulty": "beginner"
+    },
+
+    {
+      "question": "3. SQ tag is found in which of the following sequence format?",
+      "answers": {
+        "a": "FASTA",
+        "b": "GENBANK",
+        "c": "EMBL",
+        "d": "FASTQ"
+      },
+          
+      "correctAnswer": "c",
+      "difficulty": "beginner"
     }
 
       
