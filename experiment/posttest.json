@@ -37,6 +37,19 @@
           
       "correctAnswer": "c",
       "difficulty": "beginner"
+    },
+
+    {
+      "question": "4.	Which among these databases is not considered a nucleic acid sequence database?",
+      "answers": {
+        "a": "DDBJ",
+        "b": "EMBL",
+        "c": "GenBank",
+        "d": "FASTQ"
+      },
+          
+      "correctAnswer": "d",
+      "difficulty": "beginner"
     }
 
       
