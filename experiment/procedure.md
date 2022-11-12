@@ -12,7 +12,7 @@ The File Format Converter converts nucleotide file formats from GenBank to FASTA
  &nbsp;
 
  
-2.	Upload any file which needs to be converted by clicking on the “Choose file“ button
+2.	Upload any file which needs to be converted by clicking on the “Select DNA sequence:“ button
 
 <img src="images/2.png" title="" />
 
@@ -25,7 +25,7 @@ The File Format Converter converts nucleotide file formats from GenBank to FASTA
  &nbsp;
  
  
-3. If the file type is known, select the file type from the dropdown for “Convert file from:”. If it is unknown during the submission, it would be selected automatically. As the file is loaded the contents of the file are displayed in the text area.
+3. As the file is loaded the contents of the file are displayed in the text area. Simultaneously the dropdown menu for the file formats would also appear. By default the uploaded file format is selected in the "Convert file from:" dropdown menu but there is also a option to manually change the option.  
  
 <img src="images/4.png" title="" />
 
@@ -42,7 +42,7 @@ The File Format Converter converts nucleotide file formats from GenBank to FASTA
 
  &nbsp;
  
-5.	Click on “Submit”; the FASTA file format will be displayed in the text area which can be downloaded by clicking on the “Download result”.
+5.	The FASTA file format will be displayed in the text area which can be downloaded by clicking on the “Download result”.
 
 <img src="images/7.png" title="" />
 
