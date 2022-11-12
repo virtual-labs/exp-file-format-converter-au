@@ -29,3 +29,4 @@ SrNo | Name | Faculty or Student | Department| Institute | Email id
 2 | Rakhi Radhamani | Research Assistant | Amrita Virtual Labs | Amrita Vishwa Vidyapeetham | rakhir@am.amrita.edu
 3 | Sreelekshmi S | Research Assistant | Amrita Virtual Labs | Amrita Vishwa Vidyapeetham | sreelekshmis@am.amrita.edu 
 4 | Nijin N | Research Assistant | Amrita Virtual Labs | Amrita Vishwa Vidyapeetham | nijinn@am.amrita.edu
+5 | Dhanush Kumar | Research Assistant| Amrita Virtual Labs | Amrita Vishwa Vidyapeetham | dhanushkumar@am.amrita.edu
