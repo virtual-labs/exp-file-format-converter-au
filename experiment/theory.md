@@ -3,18 +3,18 @@
 ### Introduction
 &nbsp;
 
-A biological sequence is represented as a single, continuous molecule of nucleic acid (DNA, RNA) or protein. A database refers to a structured collection of information for providing data in a computer-readable form. In the case of a protein database, it explains basic units of the given protein, and properties of proteins such as the name of the protein, length, and specific amino acid sequences. File formats are important for storing managing and exchanging data in science and engineering communities. Basically, a file format is a standard method for encoding biological information that can be stored as a computer file. In a broader sense, it is noted that file formats extend to achieve uniformity in the presentation of biological sequences. Recent advances in software tools for analyzing biological information marked the need for standard file formats for the usage and exchange of biological data for educational and research purposes. Various bioinformatics software has been explored for solving the difficulties associated with encoding complicated genomic knowledge which demands a distinct sequence format. A number of file formats for representing nucleotides (DNA and RNA) and protein were available in public domains. 
+A biological sequence represents a single, continuous molecule of nucleic acid (DNA, RNA) or protein. These sequences become meaningful when they are annotated and stored in different databases. A database is a structured collection of data that can be read and retrieved when required. In the case of protein databases, it explains the basic units of a given protein and properties of proteins, such as the name of the protein, length, and specific amino acid sequences. All the annotations need to be displayed uniformly so that the data becomes understandable for anybody who wants to know more about the data. File formats were brought to create this uniformity among the scientific community. In a broader sense, it is noted that file formats extend to achieve uniformity in the presentation of biological sequences. These formats are essential for storing, managing, and exchanging data in science and engineering communities. A file format is a standard method for encoding biological information that can be stored as a computer file. Recent advances in software tools for analyzing biological information marked the need for common file formats for the usage and exchange of biological data for educational and research purposes. Various bioinformatics software has been explored to solve the difficulties associated with encoding complicated genomic knowledge that demands a distinct sequence format. Several file formats for representing nucleotides (DNA and RNA) and proteins were available in public domains.
 
 &nbsp;
 
 ### Overview of File formats used in Bioinformatics
 &nbsp;
 
-A file format, often known as a file extension, represents structured data within a computer file so that software can access and understand data, and properly understand the data that can process it further. In bioinformatics, for example for sequence analysis, there exists different file formats such as alignment file formats and annotation file formats.
+A file format, often known as a file extension, represents structured data within a computer file so that any software can access and understand data that can be further analyzed to solve different life science problems. In bioinformatics, for example, for sequence analysis, different file formats exist such as alignment, phylogenetics, and annotation.
 
 A few advantages of file formats in bioinformatics are listed:
 
-   •	File formats were developed with specific purposes for providing compatibility per specific software in computational research. Examples included structure vsualizations diagrams and mappings of biological sequences.
+   •	File formats were developed to provide compatibility per specific software in computational research. Examples include structure visualizations diagrams and mappings of biological sequences.
 
    •	Easiness in data processing efficiency.
 
@@ -22,13 +22,13 @@ A few advantages of file formats in bioinformatics are listed:
  
 &nbsp;
 
-### Description on Sequence File Formats in Bioinformatics
+### Some Sequence File Formats in Bioinformatics
 
-As discussed, in the field of bioinformatics, there were many different file formats exists to store DNA and protein sequence information. DNA and RNA use 1 letter codes that represents the bases (A Adenine, T, Thymine, Uracil (U) in RNA instead of T, G-Guanine and C-Cytosine,) in a sequence format. Proteins are molecules with amino acids as building blocks and each protein differ from other with respect to their amino acid sequence. Amino acids were represented either by three-letter codes or by one-letter codes.G (Glycine Gly), P (Proline Pro), A (Alanine Ala),  V (Valine Val), L (Leucine Leu), I (Isoleucine Ile), M (Methionine Met), C (Cysteine Cys), F (Phenylalanine Phe), Y (Tyrosine Tyr), W (Tryptophan Trp), H (Histidine His), K (Lysine Lys), R (Arginine Arg), Q (Glutamine Gln), N (Asparagine Asn), E (Glutamic Acid Glu), D (Aspartic Acid Asp), S (Serine Ser), T (Threonine Thr).
+As discussed, in the field of bioinformatics, there were many different file formats exist to store DNA, RNA, and protein sequence information. DNA and RNA use 1-letter codes that represent the bases (A Adenine, T, Thymine, Uracil (U) in RNA instead of T, G-Guanine, and C-Cytosine,) in a sequence format. Proteins are molecules with amino acids as building blocks, and each protein differs from others with respect to its amino acid sequence. Amino acids were represented either by three-letter codes or by one-letter codes. G (Glycine Gly), P (Proline Pro), A (Alanine Ala),  V (Valine Val), L (Leucine Leu), I (Isoleucine Ile), M (Methionine Met), C (Cysteine Cys), F (Phenylalanine Phe), Y (Tyrosine Tyr), W (Tryptophan Trp), H (Histidine His), K (Lysine Lys), R (Arginine Arg), Q (Glutamine Gln), N (Asparagine Asn), E (Glutamic Acid Glu), D (Aspartic Acid Asp), S (Serine Ser), T (Threonine Thr).
 
 Example of a DNA sequence: **ATCGGTGACTATCGCATCGTTAACCTCTT**
 
-Example of a Protein sequence:  **GIVEQCCTSICSLYQLENYCN **
+Example of a Protein sequence: **GIVEQCCTSICSLYQLENYCN**
 
 
 
