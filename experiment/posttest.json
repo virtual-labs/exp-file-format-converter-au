@@ -4,10 +4,10 @@
     {
       "question": "1. Identify the FASTA file format from the given formats.",
       "answers": {
-        "a": ">KX580312.1 Homo sapiens truncated breast cancer 1 (BRCA1) gene, exon 15 and partial /\n GTCATCCCCTTCTAAATGCCCATCATTAGATGATAGGTGGTACATGCACAGTTGCTCTGGGAG",
-        "b": "< KX580312.1 Homo sapiens truncated breast cancer 1 (BRCA1) gene, exon 15 and partial /\n GTCATCCCCTTCTAAATGCCCATCATTAGATGATAGGTGGTACATGCACAGTTGCTCTGGGAG",
-        "c": "//KX580312.1 Homo sapiens truncated breast cancer 1 (BRCA1) gene, exon 15 and partial /\n GTCATCCCCTTCTAAATGCCCATCATTAGATGATAGGTGGTACATGCACAGTTGCTCTGGGAG",
-        "d": "//KX580312.1 Homo sapiens truncated breast cancer 1 (BRCA1) gene, exon 15 and partial /\n GTCATCCCCTTCTAAATGCCCATCATTAGATGATAGGTGGTACATGCACAGTTGCTCTGGGAG//"
+        "a": ">KX580312.1 Homo sapiens truncated breast cancer 1 (BRCA1) gene, exon 15 and partial \n \t GTCATCCCCTTCTAAATGCCCATCATTAGATGATAGGTGGTACATGCACAGTTGCTCTGGGAG",
+        "b": "< KX580312.1 Homo sapiens truncated breast cancer 1 (BRCA1) gene, exon 15 and partial \n \t GTCATCCCCTTCTAAATGCCCATCATTAGATGATAGGTGGTACATGCACAGTTGCTCTGGGAG",
+        "c": "//KX580312.1 Homo sapiens truncated breast cancer 1 (BRCA1) gene, exon 15 and partial \n \t GTCATCCCCTTCTAAATGCCCATCATTAGATGATAGGTGGTACATGCACAGTTGCTCTGGGAG",
+        "d": "//KX580312.1 Homo sapiens truncated breast cancer 1 (BRCA1) gene, exon 15 and partial \n \t GTCATCCCCTTCTAAATGCCCATCATTAGATGATAGGTGGTACATGCACAGTTGCTCTGGGAG//"
       },
       
       "correctAnswer": "a",
@@ -40,7 +40,7 @@
     },
 
     {
-      "question": "4.	Which among these databases is not considered a nucleic acid sequence database?",
+      "question": "4. Which among these databases is not considered a nucleic acid sequence database?",
       "answers": {
         "a": "DDBJ",
         "b": "EMBL",
@@ -51,8 +51,5 @@
       "correctAnswer": "d",
       "difficulty": "beginner"
     }
-
-      
-    
   ]
 }
