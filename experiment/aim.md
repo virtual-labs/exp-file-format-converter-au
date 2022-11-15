@@ -1,6 +1,3 @@
-### Aim of the experiment
-
-
 
 1. To learn the most popular file formats used in bioinformatics for representing a biological sequence.
 
