@@ -18,33 +18,27 @@
 
 ### Introduction
 &nbsp;
-
 A biological sequence represents a single, continuous molecule of nucleic acid (DNA, RNA) or protein. These sequences become meaningful when they are annotated and stored in different databases. A database is a structured collection of data that can be read and retrieved when required. In the case of protein databases, it explains the basic units of a given protein and properties of proteins, such as the name of the protein, length, and specific amino acid sequences. All the annotations need to be displayed uniformly so that the data becomes understandable for anybody who wants to know more about the data. File formats were brought to create this uniformity among the scientific community. In a broader sense, it is noted that file formats extend to achieve uniformity in the presentation of biological sequences. These formats are essential for storing, managing, and exchanging data in science and engineering communities. A file format is a standard method for encoding biological information that can be stored as a computer file. Recent advances in software tools for analyzing biological information marked the need for common file formats for the usage and exchange of biological data for educational and research purposes. Various bioinformatics software has been explored to solve the difficulties associated with encoding complicated genomic knowledge that demands a distinct sequence format. Several file formats for representing nucleotides (DNA and RNA) and proteins were available in public domains.
-
 &nbsp;
 
-### Overview of File formats used in Bioinformatics
+#### Overview of File formats used in Bioinformatics
 &nbsp;
-
 Bioinformaticians created a plethora of bioinformatics software throughout the year to solve the difficulties associated with encoding complicated genomic knowledge. Depending on the circumstances, the bioinformatics tool demands a distinct sequence format. Every tool uses a specific set of formats for processing. Thus, there is a need for sequence file format conversion. Several file formats representing nucleotides (DNA and RNA) and proteins were available in public domains.
 
 A file format, often known as a file extension, refers to how data is structured within a file on a computer. File formatting enables software to access data, properly understand the data, and continue with processing. A series of file formats known as biological file formats are used since it is now possible to store enormous biological data digitally. The file formats used in bioinformatics and genome sequence analysis methods include different data file formats, alignment file formats, and annotation file formats. Each data file format was developed with its purposes in computational research. Some of the advantages of these file formats are:
 
-      •	Compatibility per specific software (for visualizations, diagrams, and mappings).
+     • Compatibility per specific software (for visualizations, diagrams, and mappings).
 
-      •	Simple text for easy data processing, parsing, and human readability.
+     • Simple text for easy data processing, parsing, and human readability.
 
-      •	Improve efficiency for computers. 
+     • Improve efficiency for computers. 
 
 Specific tools use specific data formats to store a large amount of bioinformatic data. Some examples of data formats in bioinformatics are FASTA format, Genbank file format, EMBL format, Swiss-prot format, DDBJ format, GDE Format, NBRF/PIR Format, Multiple Sequence Alignment Data Format includes (GCG/MSF format and ALN/Clustal Format) Structural Data Format includes PDB Format, Annotation Data Formats includes GFF, GFF2, GFF3 Format, NGS Data Formats includes SAM/BAM Format, Annotation Data Formats includes FASTQ Format. Other file formats like
 
     SFF(Standard flowgram format) and ABI-binary file format containing sanger sequencing sequence and trace data.
    
     MDL- contains information regarding small molecules (2D structure data)
-
- 
-&nbsp;
-
+ &nbsp;
 ### Some Sequence File Formats in Bioinformatics
 
 As discussed, in the field of bioinformatics, there were many different file formats exist to store DNA, RNA, and protein sequence information. DNA and RNA use 1-letter codes that represent the bases (A Adenine, T, Thymine, Uracil (U) in RNA instead of T, G-Guanine, and C-Cytosine,) in a sequence format. Proteins are molecules with amino acids as building blocks, and each protein differs from others with respect to its amino acid sequence. Amino acids were represented either by three-letter codes or by one-letter codes. G (Glycine Gly), P (Proline Pro), A (Alanine Ala),  V (Valine Val), L (Leucine Leu), I (Isoleucine Ile), M (Methionine Met), C (Cysteine Cys), F (Phenylalanine Phe), Y (Tyrosine Tyr), W (Tryptophan Trp), H (Histidine His), K (Lysine Lys), R (Arginine Arg), Q (Glutamine Gln), N (Asparagine Asn), E (Glutamic Acid Glu), D (Aspartic Acid Asp), S (Serine Ser), T (Threonine Thr).
@@ -52,16 +46,9 @@ As discussed, in the field of bioinformatics, there were many different file for
 Example of a DNA sequence: **ATCGGTGACTATCGCATCGTTAACCTCTT**
 
 Example of a Protein sequence: **GIVEQCCTSICSLYQLENYCN**
-
-
-
 &nbsp;
 ### Commonly used FILE FORMATS
-
 &nbsp;
-&nbsp;
-
-
 **1.	FASTA FORMAT**
 
 The FASTA format is a ubiquitous text-based format invented in 1988 for representing either nucleotide sequences or peptide sequences, in which base pairs or amino acids are represented using single-letter codes. A sequence in FASTA format begins with a single-line description, followed by lines of sequence data. The first line in a FASTA file starts with a ">" (greater-than) symbol followed by the description or identifier of the sequence. Following the initial line (used for a unique description of the sequence) is the actual sequence itself in standard one-letter code. The file extensions .fa, .fasta, or .fna are commonly used for FASTA files, with the latter indicating that they are nucleotide files.
@@ -283,7 +270,7 @@ DNA and protein sequences are stored in databases using different biological seq
 **Input Data Collection & Analysis:**
 The DNA sequence can be in GENBANK or EMBL file format which can be obtained from different databases, saved as **.txt format** serves as the simulation's input data.
 
-**Model Translation**
+**Model Translation:**
 Interface of the simulator can be developed in HTML as it is light weighted and fast to load, and every browser supports HTML. CSS was used to help style the html elements and JavaScript was used as the programming language to create dynamic and interactive web content.
 
 
