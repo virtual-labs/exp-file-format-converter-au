@@ -3,18 +3,18 @@
 ### Introduction
 &nbsp;
 
-A biological sequence represents a single, continuous molecule of nucleic acid (DNA, RNA) or protein. A database refers to a structured collection of information for providing data in a computer-readable form. In the case of a protein database, it explains basic units of the given protein, and properties of proteins such as the name of the protein, length, and specific amino acid sequences. File formats are important for storing managing and exchanging data in science and engineering communities. Basically, a file format is a standard method for encoding biological information that can be stored as a computer file. In a broader sense, it is noted that file formats extend to achieve uniformity in the presentation of biological sequences. Recent advances in software tools for analyzing biological information marked the need for standard file formats for the usage and exchange of biological data for educational and research purposes. Various bioinformatics software has been explored for solving the difficulties associated with encoding complicated genomic knowledge which demands a distinct sequence format. A number of file formats for representing nucleotides (DNA and RNA) and protein were available in public domains. 
+A biological sequence represents a single, continuous molecule of nucleic acid (DNA, RNA) or protein. These sequences become meaningful when they are annotated and stored in different databases. A database is a structured collection of data that can be read and retrieved when required. In the case of protein databases, it explains the basic units of a given protein and properties of proteins, such as the name of the protein, length, and specific amino acid sequences. All the annotations need to be displayed uniformly so that the data becomes understandable for anybody who wants to know more about the data. File formats were brought to create this uniformity among the scientific community. In a broader sense, it is noted that file formats extend to achieve uniformity in the presentation of biological sequences. These formats are essential for storing, managing, and exchanging data in science and engineering communities. A file format is a standard method for encoding biological information that can be stored as a computer file. Recent advances in software tools for analyzing biological information marked the need for common file formats for the usage and exchange of biological data for educational and research purposes. Various bioinformatics software has been explored to solve the difficulties associated with encoding complicated genomic knowledge that demands a distinct sequence format. Several file formats for representing nucleotides (DNA and RNA) and proteins were available in public domains.
 
 &nbsp;
 
 ### Overview of File formats used in Bioinformatics
 &nbsp;
 
-A file format, often known as a file extension, represents structured data within a computer file so that software can access and understand data, and properly understand the data that can process it further. In bioinformatics, for example for sequence analysis, there exists different file formats such as alignment file formats and annotation file formats.
+A file format, often known as a file extension, represents structured data within a computer file so that any software can access and understand data that can be further analyzed to solve different life science problems. In bioinformatics, for example, for sequence analysis, different file formats exist such as alignment, phylogenetics, and annotation.
 
 A few advantages of file formats in bioinformatics are listed:
 
-   •	File formats were developed with specific purposes for providing compatibility per specific software in computational research. Examples included structure vsualizations diagrams and mappings of biological sequences.
+   •	File formats were developed to provide compatibility per specific software in computational research. Examples include structure visualizations diagrams and mappings of biological sequences.
 
    •	Easiness in data processing efficiency.
 
@@ -22,13 +22,13 @@ A few advantages of file formats in bioinformatics are listed:
  
 &nbsp;
 
-### Description on Sequence File Formats in Bioinformatics
+### Some Sequence File Formats in Bioinformatics
 
-As discussed, in the field of bioinformatics, there were many different file formats exists to store DNA and protein sequence information. DNA and RNA use 1 letter codes that represents the bases (A Adenine, T, Thymine, Uracil (U) in RNA instead of T, G-Guanine and C-Cytosine,) in a sequence format. Proteins are molecules with amino acids as building blocks and each protein differ from other with respect to their amino acid sequence. Amino acids were represented either by three-letter codes or by one-letter codes.G (Glycine Gly), P (Proline Pro), A (Alanine Ala),  V (Valine Val), L (Leucine Leu), I (Isoleucine Ile), M (Methionine Met), C (Cysteine Cys), F (Phenylalanine Phe), Y (Tyrosine Tyr), W (Tryptophan Trp), H (Histidine His), K (Lysine Lys), R (Arginine Arg), Q (Glutamine Gln), N (Asparagine Asn), E (Glutamic Acid Glu), D (Aspartic Acid Asp), S (Serine Ser), T (Threonine Thr).
+As discussed, in the field of bioinformatics, there were many different file formats exist to store DNA, RNA, and protein sequence information. DNA and RNA use 1-letter codes that represent the bases (A Adenine, T, Thymine, Uracil (U) in RNA instead of T, G-Guanine, and C-Cytosine,) in a sequence format. Proteins are molecules with amino acids as building blocks, and each protein differs from others with respect to its amino acid sequence. Amino acids were represented either by three-letter codes or by one-letter codes. G (Glycine Gly), P (Proline Pro), A (Alanine Ala),  V (Valine Val), L (Leucine Leu), I (Isoleucine Ile), M (Methionine Met), C (Cysteine Cys), F (Phenylalanine Phe), Y (Tyrosine Tyr), W (Tryptophan Trp), H (Histidine His), K (Lysine Lys), R (Arginine Arg), Q (Glutamine Gln), N (Asparagine Asn), E (Glutamic Acid Glu), D (Aspartic Acid Asp), S (Serine Ser), T (Threonine Thr).
 
 Example of a DNA sequence: **ATCGGTGACTATCGCATCGTTAACCTCTT**
 
-Example of a Protein sequence:  **GIVEQCCTSICSLYQLENYCN **
+Example of a Protein sequence: **GIVEQCCTSICSLYQLENYCN**
 
 
 
@@ -106,6 +106,66 @@ An example of GenBank sequence is shown below:
 
 &nbsp;
 &nbsp;
+
+Each tag in the Genbank format is briefly described below:
+
+•	LOCUS: The LOCUS field contains a number of different data elements, including locus name, sequence length, molecule type, GenBank division, and modification date. The locus name was originally designed to help group entries with similar sequences: the first three characters usually designated the organism; the fourth and fifth characters were used to show other group designations, such as gene product; for segmented entries, the last character was one of a series of sequential integers. However, the 10 characters in the locus name are no longer sufficient to represent the amount of information originally intended to be contained in the locus name. The only rule now applied in assigning a locus name is that it must be unique. For example, for GenBank records that have 6-character accessions (e.g., U12345), the locus name is usually the first letter of the genus and species names, followed by the accession number. For 8-character, character accessions (e.g., AF123456), the locus name is just the accession number.
+
+•	SEQUENCE LENGTH: Number of nucleotide base pairs (or amino acid residues) in the sequence record. In this example, the sequence length is 1425bp.There is no maximum limit on the size of a sequence that can be submitted to GenBank. We can submit a whole genome if we have a contiguous piece of sequence from a single molecule type. However, there is a limit of 350 kb on an individual GenBank record. That limit was agreed upon by the international collaborating sequence databases to facilitate handling of sequence data by various software programs. The minimum length required for submission is 50 bp.
+
+•	MOLECULE TYPE: The type of molecule that was sequenced. In this example, the molecule type is mRNA. Each GenBank record must contain contiguous sequence data from a single molecule type. The various molecule types are described in the Sequin documentation and can include genomic DNA, genomic RNA, precursor RNA, mRNA (cDNA), ribosomal RNA, transfer RNA, small nuclear RNA, and small cytoplasmic RNA.
+
+•	GENBANK DIVISION: The GenBank division to which a record belongs is indicated with a three letter abbreviation. In this example, GenBank division is VRT. The GenBank database is divided into 18 divisions:
+1.	PRI - primate sequences
+2.	ROD - rodent sequences
+3.	MAM - other mammalian sequences
+4.	VRT - other vertebrate sequences
+5.	INV - invertebrate sequences
+6.	PLN - plant, fungal, and algal sequences
+7.	BCT - bacterial sequences
+8.	VRL - viral sequences
+9.	PHG - bacteriophage sequences
+10.	SYN - synthetic sequences
+11.	UNA - unannotated sequences
+12.	EST - EST sequences (expressed sequence tags)
+13.	PAT - patent sequences
+14.	STS - STS sequences (sequence tagged sites)
+15.	GSS - GSS sequences (genome survey sequences)
+16.	HTG - HTG sequences (high-throughput genomic sequences)
+17.	HTC - unfinished high-throughput cDNA sequencing
+18.	ENV - environmental sampling sequences
+
+•	MODIFICATION DATE: The date in the LOCUS field is the date of last modification. The sample record shown here was last modified on 12-MAR-2013.
+
+•	DEFINITION: Definition means the brief description of sequence; ie information such as source organism, gene name/protein name, or some description of the sequence's function (if the sequence is non-coding). If the sequence has a coding region (CDS), description may be followed by a completeness qualifier, such as "complete cds".
+
+•	ACCESSION: The unique identifier for a sequence record. An accession number applies to the complete record and is usually a combination of a letter(s) and numbers, such as a single letter followed by five digits (e.g., U12345) or two letters followed by six digits (e.g., JX307852). Some accessions might be longer, depending on the type of sequence record. 
+
+•	VERSION: A nucleotide sequence identification number that represents a single, specific sequence in the GenBank database. This identification number uses the accession.version format implemented by GenBank/EMBL/DDBJ in February 1999.If there is any change to the sequence data (even a single base), the version number will be increased,e.g., U12345.1 → U12345.2, but the accession portion will remain stable. 
+
+•	KEYWORDS: Word or phrase describing the sequence. If no keywords are included in the entry, the field contains only a period. Keywords are generally present in older records. They are not included in newer records unless: (1) they are not redundant with any feature, qualifier, or other information present in the record; or (2) the submitter specifically asks for them to be added and #1 is true; or (3) the record contains a special type of sequence such as EST, STS, GSS, HTG, etc.
+
+•	SOURCE: Free-format information including an abbreviated form of the organism name, sometimes followed by a molecule type.
+
+•	ORGANISM: The formal scientific name for the source organism (genus and species) and its lineage, based on the phylogenetic classification scheme were described in the tag.
+
+•	REFERENCE: Publications by the authors of the sequence that discuss the data reported in the record. References are automatically sorted within the record based on date of publication, showing the oldest references first. Various classes of publication can be present in the References field, including journal article, book chapter, book, thesis/monograph, proceedings chapter, proceedings from a meeting, and patent.
+
+•	AUTHORS: List of authors in the order in which they appear in the cited article.
+
+•	TITLE: Title of the published work or tentative title of an unpublished work.
+
+•	PUBMED: PubMed Identifier (PMID): References that include PubMed IDs contain links from the sequence record to the corresponding PubMed record. 
+
+•	FEATURES: Information about genes and gene products, as well as regions of biological significance reported in the sequence. These can include regions of the sequence that code for proteins and RNA molecules, as well as a number of other features.
+
+•	SOURCE: Mandatory feature in each record that summarizes the length of the sequence, scientific name of the source organism, and Taxon ID number. Can also include other information such as map location, strain, clone, tissue type, etc., if provided by submitter.
+
+•	TAXON: A stable unique identification number for the taxon of the source organism. A taxonomy ID number is assigned to each taxon (species, genus, family, etc.) in the NCBI Taxonomy Database.
+
+•	.CDS: Coding sequence; region of nucleotides that corresponds with the sequence of amino acids in a protein (location includes start and stop codons). The CDS feature includes an amino acid translation. Authors can specify the nature of the CDS by using the qualifier "/evidence=experimental" or "/evidence=not_experimental". Submitters are also encouraged to annotate the mRNA feature, which includes the 5' untranslated region (5'UTR), coding sequences (CDS, exon), and 3' untranslated region (3'UTR).
+
+•	ORIGIN: The ORIGIN may be left blank, may appear as "Unreported," or may give a local pointer to the sequence start, usually involving an experimentally determined restriction cleavage site or the genetic locus. This information is present only in older records. The sequence data begin on the line immediately below ORIGIN. 
 
 
 **4.	EMBL FORMAT**
@@ -209,3 +269,28 @@ Binary Alignment and Map -BAM
 General Feature Format -GFF
 
 National Biomedical Research Foundation -NBRF
+
+
+### Algorithm to develop a file format simulator
+
+#### Step 1: Problem Definition:
+
+To convert the file format of a given biological sequence to another format which can be downloaded.
+
+#### Step 2: Project Planning & System Definition:
+
+DNA and protein sequences are stored in databases using different biological sequence file formats. The file formats (eg; EMBL, FASTA, GENBANK etc) differs in the presence of special characters and words that indicate where the detailed information as well as the sequence lies in the document. In this simulator we can convert EMBL or GENBANK file format to FASTA format.
+
+#### Step 3: Model Formulation:
+
+<img src="">
+
+
+**Input Data Collection & Analysis:**
+The DNA sequence can be in GENBANK or EMBL file format which can be obtained from different databases, saved as **.txt format** serves as the simulation's input data.
+
+**Model Translation**
+Interface of the simulator can be developed in HTML as it is light weighted and fast to load, and every browser supports HTML. CSS was used to help style the html elements and JavaScript was used as the programming language to create dynamic and interactive web content.
+
+
+
