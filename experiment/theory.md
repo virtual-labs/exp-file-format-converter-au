@@ -1,5 +1,5 @@
 <b>List of Abbreviations</b>
-   
+
       Deoxyribonucleic acid - DNA
       Ribonucleic acid - RNA  
       European Molecular Biology Laboratory - EMBL
@@ -12,6 +12,8 @@
       Binary Alignment and Map -BAM
       General Feature Format -GFF
       National Biomedical Research Foundation -NBRF
+   
+
 &nbsp;
 
 ### Introduction
@@ -34,7 +36,8 @@ A file format, often known as a file extension, refers to how data is structured
 
       •	Improve efficiency for computers. 
 
-Specific tools use specific data formats to store a large amount of bioinformatic data. Some examples of data formats in bioinformatics are FASTA format, Genbank file format, EMBL format, Swiss-prot format, DDBJ format, GDE Format, NBRF/PIR Format, Multiple Sequence Alignment Data Format includes (GCG/MSF format and ALN/Clustal Format) Structural Data Format includes PDB Format, Annotation Data Formats includes GFF, GFF2, GFF3 Format, NGS Data Formats includes SAM/BAM Format, Annotation Data Formats includes FASTQ Format. Other file formats like 
+Specific tools use specific data formats to store a large amount of bioinformatic data. Some examples of data formats in bioinformatics are FASTA format, Genbank file format, EMBL format, Swiss-prot format, DDBJ format, GDE Format, NBRF/PIR Format, Multiple Sequence Alignment Data Format includes (GCG/MSF format and ALN/Clustal Format) Structural Data Format includes PDB Format, Annotation Data Formats includes GFF, GFF2, GFF3 Format, NGS Data Formats includes SAM/BAM Format, Annotation Data Formats includes FASTQ Format. Other file formats like
+
     SFF(Standard flowgram format) and ABI-binary file format containing sanger sequencing sequence and trace data.
    
     MDL- contains information regarding small molecules (2D structure data)
@@ -79,7 +82,7 @@ A FASTA file can contain multiple sequences. Each sequence will be separated by 
 
 <img src="images/theory1.png" align="center" title="" />
 
- Figure 1: FASTA file format for the Akt1 mRNA sequence for the organism Danio rerio 
+ Figure 1: FASTA file format for the Akt1 mRNA sequence for the organism _Danio rerio _
  
 </div>
 
