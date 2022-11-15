@@ -283,7 +283,7 @@ DNA and protein sequences are stored in databases using different biological seq
 **Input Data Collection & Analysis:**
 The DNA sequence can be in GENBANK or EMBL file format which can be obtained from different databases, saved as **.txt format** serves as the simulation's input data.
 
-**Model Translation**
+**Model Translation:**
 Interface of the simulator can be developed in HTML as it is light weighted and fast to load, and every browser supports HTML. CSS was used to help style the html elements and JavaScript was used as the programming language to create dynamic and interactive web content.
 
 
