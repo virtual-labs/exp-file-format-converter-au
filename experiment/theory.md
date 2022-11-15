@@ -269,3 +269,28 @@ Binary Alignment and Map -BAM
 General Feature Format -GFF
 
 National Biomedical Research Foundation -NBRF
+
+
+### Algorithm to develop a file format simulator
+
+#### Step 1: Problem Definition:
+
+To convert the file format of a given biological sequence to another format which can be downloaded.
+
+#### Step 2: Project Planning & System Definition:
+
+DNA and protein sequences are stored in databases using different biological sequence file formats. The file formats (eg; EMBL, FASTA, GENBANK etc) differs in the presence of special characters and words that indicate where the detailed information as well as the sequence lies in the document. In this simulator we can convert EMBL or GENBANK file format to FASTA format.
+
+#### Step 3: Model Formulation:
+
+<img src="">
+
+
+**Input Data Collection & Analysis:**
+The DNA sequence can be in GENBANK or EMBL file format which can be obtained from different databases, saved as **.txt format** serves as the simulation's input data.
+
+**Model Translation**
+HTML describes the interface of the simulator and CSS helps to style the html elements. JavaScript is used as programming language for to create dynamic and interactive web content.
+HTML is light weighted and fast to load, and every browser supports HTML.
+
+
