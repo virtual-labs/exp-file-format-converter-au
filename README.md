@@ -12,7 +12,8 @@ The goal of proposed virtual laboratories is to achieve a conceptual understandi
   
 With this experiment, the user can
   1. Learn most popular file formats used in bioinformatics for representing a biological sequence.
-  2. Covert format of a given biological sequence to another format for performing various tasks in bioinformatics.
+  2. Convert format of a given biological sequence to another format for performing various tasks in bioinformatics.
+
 
 
 <b>Name of Developer | <b> Dr. Shyam Diwakar
