@@ -1,4 +1,3 @@
-### References
 &nbsp;
 ### Journal
 1.	Ahmed, S., Ali, M. U., Ferzund, J., Sarwar, M. A., Rehman, A., & Mehmood, A. (2017). Modern data formats for big bioinformatics data analytics. arXiv preprint arXiv:1707.05364.
