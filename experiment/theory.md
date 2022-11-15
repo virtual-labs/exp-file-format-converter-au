@@ -1,5 +1,19 @@
-
+<b>List of Abbreviations</b>
+   
+      Deoxyribonucleic acid - DNA
+      Ribonucleic acid - RNA  
+      European Molecular Biology Laboratory - EMBL
+      European Bioinformatics Institute -EBI
+      DNA Data Bank of Japan - DDBJ
+      Protein Data Bank –PDB
+      Protein Information Resource -PIR
+      Next-generation sequencing -NGS
+      Sequence Alignment and Map -SAM
+      Binary Alignment and Map -BAM
+      General Feature Format -GFF
+      National Biomedical Research Foundation -NBRF
 &nbsp;
+
 ### Introduction
 &nbsp;
 
@@ -10,15 +24,21 @@ A biological sequence represents a single, continuous molecule of nucleic acid (
 ### Overview of File formats used in Bioinformatics
 &nbsp;
 
-A file format, often known as a file extension, represents structured data within a computer file so that any software can access and understand data that can be further analyzed to solve different life science problems. In bioinformatics, for example, for sequence analysis, different file formats exist such as alignment, phylogenetics, and annotation.
+Bioinformaticians created a plethora of bioinformatics software throughout the year to solve the difficulties associated with encoding complicated genomic knowledge. Depending on the circumstances, the bioinformatics tool demands a distinct sequence format. Every tool uses a specific set of formats for processing. Thus, there is a need for sequence file format conversion. Several file formats representing nucleotides (DNA and RNA) and proteins were available in public domains.
 
-A few advantages of file formats in bioinformatics are listed:
+A file format, often known as a file extension, refers to how data is structured within a file on a computer. File formatting enables software to access data, properly understand the data, and continue with processing. A series of file formats known as biological file formats are used since it is now possible to store enormous biological data digitally. The file formats used in bioinformatics and genome sequence analysis methods include different data file formats, alignment file formats, and annotation file formats. Each data file format was developed with its purposes in computational research. Some of the advantages of these file formats are:
 
-   •	File formats were developed to provide compatibility per specific software in computational research. Examples include structure visualizations diagrams and mappings of biological sequences.
+      •	Compatibility per specific software (for visualizations, diagrams, and mappings).
 
-   •	Easiness in data processing efficiency.
+      •	Simple text for easy data processing, parsing, and human readability.
 
-   •	Quick readability and accessibility.
+      •	Improve efficiency for computers. 
+
+Specific tools use specific data formats to store a large amount of bioinformatic data. Some examples of data formats in bioinformatics are FASTA format, Genbank file format, EMBL format, Swiss-prot format, DDBJ format, GDE Format, NBRF/PIR Format, Multiple Sequence Alignment Data Format includes (GCG/MSF format and ALN/Clustal Format) Structural Data Format includes PDB Format, Annotation Data Formats includes GFF, GFF2, GFF3 Format, NGS Data Formats includes SAM/BAM Format, Annotation Data Formats includes FASTQ Format. Other file formats like 
+    SFF(Standard flowgram format) and ABI-binary file format containing sanger sequencing sequence and trace data.
+   
+    MDL- contains information regarding small molecules (2D structure data)
+
  
 &nbsp;
 
@@ -29,11 +49,6 @@ As discussed, in the field of bioinformatics, there were many different file for
 Example of a DNA sequence: **ATCGGTGACTATCGCATCGTTAACCTCTT**
 
 Example of a Protein sequence: **GIVEQCCTSICSLYQLENYCN**
-
-
-
-
-
 
 
 
@@ -49,6 +64,7 @@ Example of a Protein sequence: **GIVEQCCTSICSLYQLENYCN**
 The FASTA format is a ubiquitous text-based format invented in 1988 for representing either nucleotide sequences or peptide sequences, in which base pairs or amino acids are represented using single-letter codes. A sequence in FASTA format begins with a single-line description, followed by lines of sequence data. The first line in a FASTA file starts with a ">" (greater-than) symbol followed by the description or identifier of the sequence. Following the initial line (used for a unique description of the sequence) is the actual sequence itself in standard one-letter code. The file extensions .fa, .fasta, or .fna are commonly used for FASTA files, with the latter indicating that they are nucleotide files.
 
 An example of sample sequence is:
+
 \>KX580312.1 Homo sapiens truncated breast cancer 1 (BRCA1) gene, exon 15 and partial GTCATCCCCTTCTAAATGCCCATCATTAGATGATAGGTGGTACATGCACAGTTGCTCTGGGAGTCTTCAGAATAGAAACTACCCATCTCAAGAGGAGCTCATTAAGGTTGTTGATGTGGAGGAGTAACAGCTGGAAGAGTCTGGGCCACACGATTTGACGGAAACATCTTACTTGCCAAGGCAAGATCTAG
 
 
@@ -57,11 +73,15 @@ An example of sample sequence is:
 A FASTA file can contain multiple sequences. Each sequence will be separated by its "header" line, starting with ">".
 
 
-Example:
+**Example:**
 
-<img src="images/theory1.png" title="" />
+<div style="text-align: center">
+
+<img src="images/theory1.png" align="center" title="" />
 
  Figure 1: FASTA file format for the Akt1 mRNA sequence for the organism Danio rerio 
+ 
+</div>
 
 &nbsp;
 &nbsp;
@@ -73,23 +93,20 @@ The FASTQ format is also a text-based format to represent nucleotide sequences, 
 An example sequence in FASTQ format:
 
 @SEQ_ID <br>
-
 GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT <br>
-
 \+<br>
-
 !''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
 
 
 A FASTQ file uses four lines per sequence:<br>
 
-•	Line 1 begins with a '@' character and is followed by a sequence identifier and an optional description (like a FASTA title line).<br>
+      •	Line 1 begins with a '@' character and is followed by a sequence identifier and an optional description (like a FASTA title line).<br>
 
-•	Line 2 is the raw sequence.<br>
+      •	Line 2 is the raw sequence.<br>
 
-•	Line 3 begins with a '+' character and is optionally followed by the same sequence identifier (and any description) again.<br>
+      •	Line 3 begins with a '+' character and is optionally followed by the same sequence identifier (and any description) again.<br>
 
-•	Line 4 encodes the quality values for the sequence in Line 2 and must contain the same number of symbols as in the sequence.<br>
+      •	Line 4 encodes the quality values for the sequence in Line 2 and must contain the same number of symbols as in the sequence.<br>
 
 &nbsp;
 &nbsp;
@@ -99,73 +116,78 @@ A FASTQ file uses four lines per sequence:<br>
 The Genbank format contains experimental information in addition to the DNA/protein sequence. It holds much more information than the FASTA format. A sequence file in GenBank format can contain several sequences. GenBank format starts with the word “LOCUS” line and is followed by other annotations. The start of the sequence is marked by a line containing "ORIGIN" and the end of the sequence is marked by two slashes ("//"). The Genbank file format is quite flexible and allows annotations, comments, and references to be included within the file. The file is plain text and thus can be read with a text editor. GenBank files often have the file extension '.gb' or '.genbank'.
 An example of GenBank sequence is shown below: 
 
-<img src="images/theory2.png" title="" />
+<div style="text-align: center">
+
+<img src="images/theory2.png" title="" align="center"/>
 
 
- Figure 2: GenBank file format for the Akt1 mRNA sequence for the organism Danio rerio
+   Figure 2: GenBank file format for the Akt1 mRNA sequence for the organism _Danio rerio_
+   
+</div>
 
 &nbsp;
 &nbsp;
 
 Each tag in the Genbank format is briefly described below:
 
-•	LOCUS: The LOCUS field contains a number of different data elements, including locus name, sequence length, molecule type, GenBank division, and modification date. The locus name was originally designed to help group entries with similar sequences: the first three characters usually designated the organism; the fourth and fifth characters were used to show other group designations, such as gene product; for segmented entries, the last character was one of a series of sequential integers. However, the 10 characters in the locus name are no longer sufficient to represent the amount of information originally intended to be contained in the locus name. The only rule now applied in assigning a locus name is that it must be unique. For example, for GenBank records that have 6-character accessions (e.g., U12345), the locus name is usually the first letter of the genus and species names, followed by the accession number. For 8-character, character accessions (e.g., AF123456), the locus name is just the accession number.
+•	**LOCUS:** The LOCUS field contains a number of different data elements, including locus name, sequence length, molecule type, GenBank division, and modification date. The locus name was originally designed to help group entries with similar sequences: the first three characters usually designated the organism; the fourth and fifth characters were used to show other group designations, such as gene product; for segmented entries, the last character was one of a series of sequential integers. However, the 10 characters in the locus name are no longer sufficient to represent the amount of information originally intended to be contained in the locus name. The only rule now applied in assigning a locus name is that it must be unique. For example, for GenBank records that have 6-character accessions (e.g., U12345), the locus name is usually the first letter of the genus and species names, followed by the accession number. For 8-character, character accessions (e.g., AF123456), the locus name is just the accession number.
 
-•	SEQUENCE LENGTH: Number of nucleotide base pairs (or amino acid residues) in the sequence record. In this example, the sequence length is 1425bp.There is no maximum limit on the size of a sequence that can be submitted to GenBank. We can submit a whole genome if we have a contiguous piece of sequence from a single molecule type. However, there is a limit of 350 kb on an individual GenBank record. That limit was agreed upon by the international collaborating sequence databases to facilitate handling of sequence data by various software programs. The minimum length required for submission is 50 bp.
+•	**SEQUENCE LENGTH:** Number of nucleotide base pairs (or amino acid residues) in the sequence record. In this example, the sequence length is 1425bp.There is no maximum limit on the size of a sequence that can be submitted to GenBank. We can submit a whole genome if we have a contiguous piece of sequence from a single molecule type. However, there is a limit of 350 kb on an individual GenBank record. That limit was agreed upon by the international collaborating sequence databases to facilitate handling of sequence data by various software programs. The minimum length required for submission is 50 bp.
 
-•	MOLECULE TYPE: The type of molecule that was sequenced. In this example, the molecule type is mRNA. Each GenBank record must contain contiguous sequence data from a single molecule type. The various molecule types are described in the Sequin documentation and can include genomic DNA, genomic RNA, precursor RNA, mRNA (cDNA), ribosomal RNA, transfer RNA, small nuclear RNA, and small cytoplasmic RNA.
+•	**MOLECULE TYPE:** The type of molecule that was sequenced. In this example, the molecule type is mRNA. Each GenBank record must contain contiguous sequence data from a single molecule type. The various molecule types are described in the Sequin documentation and can include genomic DNA, genomic RNA, precursor RNA, mRNA (cDNA), ribosomal RNA, transfer RNA, small nuclear RNA, and small cytoplasmic RNA.
 
-•	GENBANK DIVISION: The GenBank division to which a record belongs is indicated with a three letter abbreviation. In this example, GenBank division is VRT. The GenBank database is divided into 18 divisions:
-1.	PRI - primate sequences
-2.	ROD - rodent sequences
-3.	MAM - other mammalian sequences
-4.	VRT - other vertebrate sequences
-5.	INV - invertebrate sequences
-6.	PLN - plant, fungal, and algal sequences
-7.	BCT - bacterial sequences
-8.	VRL - viral sequences
-9.	PHG - bacteriophage sequences
-10.	SYN - synthetic sequences
-11.	UNA - unannotated sequences
-12.	EST - EST sequences (expressed sequence tags)
-13.	PAT - patent sequences
-14.	STS - STS sequences (sequence tagged sites)
-15.	GSS - GSS sequences (genome survey sequences)
-16.	HTG - HTG sequences (high-throughput genomic sequences)
-17.	HTC - unfinished high-throughput cDNA sequencing
-18.	ENV - environmental sampling sequences
+•	**GENBANK DIVISION:** The GenBank division to which a record belongs is indicated with a three letter abbreviation. In this example, GenBank division is VRT. The GenBank database is divided into 18 divisions:
+   1.	PRI - primate sequences
+   2.	ROD - rodent sequences
+   3.	MAM - other mammalian sequences
+   4.	VRT - other vertebrate sequences
+   5.	INV - invertebrate sequences
+   6.	PLN - plant, fungal, and algal sequences
+   7.	BCT - bacterial sequences
+   8.	VRL - viral sequences
+   9.	PHG - bacteriophage sequences
+   10.	SYN - synthetic sequences
+   11.	UNA - unannotated sequences
+   12.	EST - EST sequences (expressed sequence tags)
+   13.	PAT - patent sequences
+   14.	STS - STS sequences (sequence tagged sites)
+   15.	GSS - GSS sequences (genome survey sequences)
+   16.	HTG - HTG sequences (high-throughput genomic sequences)
+   17.	HTC - unfinished high-throughput cDNA sequencing
+   18.	ENV - environmental sampling sequences
 
-•	MODIFICATION DATE: The date in the LOCUS field is the date of last modification. The sample record shown here was last modified on 12-MAR-2013.
+•	**MODIFICATION DATE:** The date in the LOCUS field is the date of last modification. The sample record shown here was last modified on 12-MAR-2013.
 
-•	DEFINITION: Definition means the brief description of sequence; ie information such as source organism, gene name/protein name, or some description of the sequence's function (if the sequence is non-coding). If the sequence has a coding region (CDS), description may be followed by a completeness qualifier, such as "complete cds".
+•	**DEFINITION:** Definition means the brief description of sequence; ie information such as source organism, gene name/protein name, or some description of the sequence's function (if the sequence is non-coding). If the sequence has a coding region (CDS), description may be followed by a completeness qualifier, such as "complete cds".
 
-•	ACCESSION: The unique identifier for a sequence record. An accession number applies to the complete record and is usually a combination of a letter(s) and numbers, such as a single letter followed by five digits (e.g., U12345) or two letters followed by six digits (e.g., JX307852). Some accessions might be longer, depending on the type of sequence record. 
+•	**ACCESSION:** The unique identifier for a sequence record. An accession number applies to the complete record and is usually a combination of a letter(s) and numbers, such as a single letter followed by five digits (e.g., U12345) or two letters followed by six digits (e.g., JX307852). Some accessions might be longer, depending on the type of sequence record. 
 
-•	VERSION: A nucleotide sequence identification number that represents a single, specific sequence in the GenBank database. This identification number uses the accession.version format implemented by GenBank/EMBL/DDBJ in February 1999.If there is any change to the sequence data (even a single base), the version number will be increased,e.g., U12345.1 → U12345.2, but the accession portion will remain stable. 
+•	**VERSION:** A nucleotide sequence identification number that represents a single, specific sequence in the GenBank database. This identification number uses the accession.version format implemented by GenBank/EMBL/DDBJ in February 1999.If there is any change to the sequence data (even a single base), the version number will be increased,e.g., U12345.1 → U12345.2, but the accession portion will remain stable. 
 
-•	KEYWORDS: Word or phrase describing the sequence. If no keywords are included in the entry, the field contains only a period. Keywords are generally present in older records. They are not included in newer records unless: (1) they are not redundant with any feature, qualifier, or other information present in the record; or (2) the submitter specifically asks for them to be added and #1 is true; or (3) the record contains a special type of sequence such as EST, STS, GSS, HTG, etc.
+•	**KEYWORDS:** Word or phrase describing the sequence. If no keywords are included in the entry, the field contains only a period. Keywords are generally present in older records. They are not included in newer records unless: (1) they are not redundant with any feature, qualifier, or other information present in the record; or (2) the submitter specifically asks for them to be added and #1 is true; or (3) the record contains a special type of sequence such as EST, STS, GSS, HTG, etc.
 
-•	SOURCE: Free-format information including an abbreviated form of the organism name, sometimes followed by a molecule type.
+•	**SOURCE:** Free-format information including an abbreviated form of the organism name, sometimes followed by a molecule type.
 
-•	ORGANISM: The formal scientific name for the source organism (genus and species) and its lineage, based on the phylogenetic classification scheme were described in the tag.
+•	**ORGANISM:** The formal scientific name for the source organism (genus and species) and its lineage, based on the phylogenetic classification scheme were described in the tag.
 
-•	REFERENCE: Publications by the authors of the sequence that discuss the data reported in the record. References are automatically sorted within the record based on date of publication, showing the oldest references first. Various classes of publication can be present in the References field, including journal article, book chapter, book, thesis/monograph, proceedings chapter, proceedings from a meeting, and patent.
+•	**REFERENCE:** Publications by the authors of the sequence that discuss the data reported in the record. References are automatically sorted within the record based on date of publication, showing the oldest references first. Various classes of publication can be present in the References field, including journal article, book chapter, book, thesis/monograph, proceedings chapter, proceedings from a meeting, and patent.
 
-•	AUTHORS: List of authors in the order in which they appear in the cited article.
+•	**AUTHORS:** List of authors in the order in which they appear in the cited article.
 
-•	TITLE: Title of the published work or tentative title of an unpublished work.
+•	**TITLE:** Title of the published work or tentative title of an unpublished work.
 
-•	PUBMED: PubMed Identifier (PMID): References that include PubMed IDs contain links from the sequence record to the corresponding PubMed record. 
+•	**PUBMED:** PubMed Identifier (PMID): References that include PubMed IDs contain links from the sequence record to the corresponding PubMed record. 
 
-•	FEATURES: Information about genes and gene products, as well as regions of biological significance reported in the sequence. These can include regions of the sequence that code for proteins and RNA molecules, as well as a number of other features.
+•	**FEATURES:** Information about genes and gene products, as well as regions of biological significance reported in the sequence. These can include regions of the sequence that code for proteins and RNA molecules, as well as a number of other features.
 
-•	SOURCE: Mandatory feature in each record that summarizes the length of the sequence, scientific name of the source organism, and Taxon ID number. Can also include other information such as map location, strain, clone, tissue type, etc., if provided by submitter.
+•	**SOURCE:** Mandatory feature in each record that summarizes the length of the sequence, scientific name of the source organism, and Taxon ID number. Can also include other information such as map location, strain, clone, tissue type, etc., if provided by submitter.
 
-•	TAXON: A stable unique identification number for the taxon of the source organism. A taxonomy ID number is assigned to each taxon (species, genus, family, etc.) in the NCBI Taxonomy Database.
+•	**TAXON:** A stable unique identification number for the taxon of the source organism. A taxonomy ID number is assigned to each taxon (species, genus, family, etc.) in the NCBI Taxonomy Database.
 
-•	.CDS: Coding sequence; region of nucleotides that corresponds with the sequence of amino acids in a protein (location includes start and stop codons). The CDS feature includes an amino acid translation. Authors can specify the nature of the CDS by using the qualifier "/evidence=experimental" or "/evidence=not_experimental". Submitters are also encouraged to annotate the mRNA feature, which includes the 5' untranslated region (5'UTR), coding sequences (CDS, exon), and 3' untranslated region (3'UTR).
+•	**.CDS:** Coding sequence; region of nucleotides that corresponds with the sequence of amino acids in a protein (location includes start and stop codons). The CDS feature includes an amino acid translation. Authors can specify the nature of the CDS by using the qualifier "/evidence=experimental" or "/evidence=not_experimental". Submitters are also encouraged to annotate the mRNA feature, which includes the 5' untranslated region (5'UTR), coding sequences (CDS, exon), and 3' untranslated region (3'UTR).
 
-•	ORIGIN: The ORIGIN may be left blank, may appear as "Unreported," or may give a local pointer to the sequence start, usually involving an experimentally determined restriction cleavage site or the genetic locus. This information is present only in older records. The sequence data begin on the line immediately below ORIGIN. 
+•	**ORIGIN:** The ORIGIN tag represents the sequence data which is displayed in the next sequence. The ORIGIN may be left blank, may appear as "Unreported," or may give a local pointer to the sequence start, usually involving an experimentally determined restriction cleavage site or the genetic locus. This information is present only in older records.  
+
 
 
 **4.	EMBL FORMAT**
@@ -174,59 +196,62 @@ EMBL is a file format used to represent DNA and protein sequence and is used by 
 EMBL format is almost similar to the Genbank file format. A sequence file in EMBL format can contain several sequences. One sequence entry starts with an identifier line ("ID"), followed by further annotation lines. The start of the sequence is marked by a line starting with "SQ" and the end of the sequence is marked by two slashes ("//").
 
 An example of EMBL sequence is shown below:
+
+<div style="text-align: center">
+
+<img src="images/theory3.png" title="" align="center"/>
+
+
  
-<img src="images/theory3.png" title="" />
- 
- 
- 
- 
-Figure 3: EMBL file format for the Akt1 mRNA sequence for the organism Danio rerio
+Figure 3: EMBL file format for the Akt1 mRNA sequence for the organism _Danio rerio_
+   
+   </div>
+   
+   
 
 Explanation:
 
-•	The ID (IDentification line) line is always the first line of an entry.<br>
+      •	The **ID** (IDentification line) line is always the first line of an entry.<br>
 
-•	The XX line contains no data or comments. It is used instead of blank lines to avoid confusion with the sequence data lines.<br>
+      •	The **XX** line contains no data or comments. It is used instead of blank lines to avoid confusion with the sequence data lines.<br>
 
-•	The AC (Accession Number) line lists the accession numbers associated with this entry.<br>
+      •	The **AC** (Accession Number) line lists the accession numbers associated with this entry.<br>
 
-•	The DT (Date) line shows when an entry appeared in the database and when it was last updated.<br>
+      •	The **DT** (Date) line shows when an entry appeared in the database and when it was last updated.<br>
 
-•	The DE (DEscription) lines contain general descriptive information about the sequence stored.<br>
+      •	The **DE**(DEscription) lines contain general descriptive information about the sequence stored.<br>
 
-•	The KW (KeyWord) lines provide information that can be used to generate cross-reference indexes of the sequence entries based on functional, structural, or other categories deemed important. The keywords chosen for each entry serve as a subject reference for the sequence and will be expanded as work with the database continues. Often several KW lines are necessary for a single entry.<br>
+      •	The **KW** (KeyWord) lines provide information that can be used to generate cross-reference indexes of the sequence entries based on functional, structural, or other categories deemed important. The keywords chosen for each entry serve as a subject reference for the sequence and will be expanded as work with the database continues. Often several KW lines are necessary for a single entry.<br>
 
-•	The OS (Organism Species) line specifies the preferred scientific name of the organism which was the source of the stored sequence.<br>
+      •	The **OS** (Organism Species) line specifies the preferred scientific name of the organism which was the source of the stored sequence.<br>
 
-•	The OC (Organism Classification) lines contain the taxonomic classification of the source organism.<br>
+      •	The **OC** (Organism Classification) lines contain the taxonomic classification of the source organism.<br>
 
-•	The RN (Reference Number) line gives a unique number to each reference citation within an entry. <br>
+      •	The **RN**(Reference Number) line gives a unique number to each reference citation within an entry. <br>
 
-•	The RC (Reference Comment) line type is an optional line type that appears if the reference has a comment.<br>
+      •	The **RC** (Reference Comment) line type is an optional line type that appears if the reference has a comment.<br>
 
-•	The RP (Reference Position) line type is an optional line type that appears if one or more contiguous base spans of the presented sequence can be attributed to the reference in question.<br>
+      •	The **RP** (Reference Position) line type is an optional line type that appears if one or more contiguous base spans of the presented sequence can be attributed to the reference in question.<br>
 
-•	The RX (Reference Cross-reference) line type is an optional line type which contains a cross-reference to an external citation or abstract database.<br>
+      •	The **RX** (Reference Cross-reference) line type is an optional line type which contains a cross-reference to an external citation or abstract database.<br>
 
-•	The RA (Reference Author) lines list the authors of the paper (or other work) cited.<br>
+      •	The **RA** (Reference Author) lines list the authors of the paper (or other work) cited.<br>
 
-•	The RT (Reference Title) lines give the paper’s title (or other work).<br>
+      •	The **RT** (Reference Title) lines give the paper’s title (or other work).<br>
 
-•	The RL (Reference Location) line contains the conventional citation information for the reference.<br>
+      •	The **RL** (Reference Location) line contains the conventional citation information for the reference.<br>
 
-•	The DR (Database Cross-Reference) line cross-references other databases which contain information related to the entry in which the DR line appears.<br>
+      •	The **DR** (Database Cross-Reference) line cross-references other databases which contain information related to the entry in which the DR line appears.<br>
 
-•	The CC lines are free text comments about the entry and may be used to convey any sort of information thought to be useful.<br>
+      •	The **CC** lines are free text comments about the entry and may be used to convey any sort of information thought to be useful.<br>
 
-•	The FH (Feature Header) lines are present only to improve the readability of an entry when it is printed or displayed on a terminal screen. The lines contain no data and may be ignored by computer programs.<br>
+      •	The **FH** (Feature Header) lines are present only to improve the readability of an entry when it is printed or displayed on a terminal screen. The lines contain no data and may be ignored by computer programs.<br>
 
-•	The FT (Feature Table) lines provide a mechanism for annotating the sequence data. Regions or sites in the sequence of interest are listed in the table.<br>
+      •	The **FT** (Feature Table) lines provide a mechanism for annotating the sequence data. Regions or sites in the sequence of interest are listed in the table.<br>
 
-•	The SQ (Sequence header) line marks the beginning of the sequence data and gives a summary of its content.<br>
+      •	The **SQ** (Sequence header) line marks the beginning of the sequence data and gives a summary of its content.<br>. The sequence starts in the next line and is written 60 bases per line, in groups of 10 bases separated by a blank character, beginning in position 6 of the line. The direction listed is always 5' to 3'.<br>
 
-•	The sequence data lines have lines of code starting with two blanks. The sequence is written 60 bases per line, in groups of 10 bases separated by a blank character, beginning in position 6 of the line. The direction listed is always 5' to 3'.<br>
-
-•	The // (terminator) line also contains no data or comments. It designates the end of an entry.<br>
+      •	The **//**(terminator) line also contains no data or comments. It designates the end of an entry.<br>
 
 
 &nbsp;
@@ -234,41 +259,7 @@ Explanation:
 
 
 
-### Other File Formats in Bioinformatics include
 
-1. ABI-binary file format containing sanger sequencing sequence and trace data.
-
-2. MDL- contains information regarding small molecules (2D structure data)
-
-3. SFF(Standard flowgram format) - binary file format
-
-&nbsp;
-
-<b>List of Abbreviations</b>
-   
-Deoxyribonucleic acid - DNA
-
-Ribonucleic acid - RNA  
-
-European Molecular Biology Laboratory - EMBL
-
-European Bioinformatics Institute -EBI
-
-DNA Data Bank of Japan - DDBJ
-
-Protein Data Bank –PDB
-
-Protein Information Resource -PIR
-
-Next-generation sequencing -NGS
-
-Sequence Alignment and Map -SAM
-
-Binary Alignment and Map -BAM
-
-General Feature Format -GFF
-
-National Biomedical Research Foundation -NBRF
 
 
 ### Algorithm to develop a file format simulator
@@ -283,7 +274,7 @@ DNA and protein sequences are stored in databases using different biological seq
 
 #### Step 3: Model Formulation:
 
-<img src="">
+<img src="images/theory4.png" title="" />
 
 
 **Input Data Collection & Analysis:**
