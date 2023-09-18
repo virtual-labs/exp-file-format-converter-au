@@ -42,6 +42,8 @@ Example of a DNA sequence: **ATCGGTGACTATCGCATCGTTAACCTCTT**
 
 Example of a Protein sequence: **GIVEQCCTSICSLYQLENYCN**
 &nbsp;
+
+
 ### Commonly used FILE FORMATS
 &nbsp;
 **1.	FASTA FORMAT**
@@ -255,6 +257,8 @@ Biological data can also be represented in different formats based on the inform
 
     SBML (System Biology Markup Language)- Contains list of reactants, products, reactions, enzymes etc. associated with a metabolic/ signalling pathway
  &nbsp;
+
+ 
 
 ### Algorithm to develop a file format simulator
 
