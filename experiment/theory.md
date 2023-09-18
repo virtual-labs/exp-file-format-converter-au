@@ -1,6 +1,6 @@
 <b>List of Abbreviations</b>
 
-      Deoxyribonucleic acid - DNA
+            Deoxyribonucleic acid - DNA
       Ribonucleic acid - RNA  
       European Molecular Biology Laboratory - EMBL
       European Bioinformatics Institute -EBI
@@ -33,12 +33,7 @@ A file format, often known as a file extension, refers to how data is structured
 
      • Improve efficiency for computers. 
 
-Specific tools use specific data formats to store a large amount of bioinformatic data. Some examples of data formats in bioinformatics are FASTA format, Genbank file format, EMBL format, Swiss-prot format, DDBJ format, GDE Format, NBRF/PIR Format, Multiple Sequence Alignment Data Format includes (GCG/MSF format and ALN/Clustal Format) Structural Data Format includes PDB Format, Annotation Data Formats includes GFF, GFF2, GFF3 Format, NGS Data Formats includes SAM/BAM Format, Annotation Data Formats includes FASTQ Format. Other file formats like
 
-    SFF(Standard flowgram format) and ABI-binary file format containing sanger sequencing sequence and trace data.
-   
-    MDL- contains information regarding small molecules (2D structure data)
- &nbsp;
 #### Some Sequence File Formats in Bioinformatics
 
 As discussed, in the field of bioinformatics, there were many different file formats exist to store DNA, RNA, and protein sequence information. DNA and RNA use 1-letter codes that represent the bases (A Adenine, T, Thymine, Uracil (U) in RNA instead of T, G-Guanine, and C-Cytosine,) in a sequence format. Proteins are molecules with amino acids as building blocks, and each protein differs from others with respect to its amino acid sequence. Amino acids were represented either by three-letter codes or by one-letter codes. G (Glycine Gly), P (Proline Pro), A (Alanine Ala),  V (Valine Val), L (Leucine Leu), I (Isoleucine Ile), M (Methionine Met), C (Cysteine Cys), F (Phenylalanine Phe), Y (Tyrosine Tyr), W (Tryptophan Trp), H (Histidine His), K (Lysine Lys), R (Arginine Arg), Q (Glutamine Gln), N (Asparagine Asn), E (Glutamic Acid Glu), D (Aspartic Acid Asp), S (Serine Ser), T (Threonine Thr).
@@ -250,7 +245,16 @@ Explanation:
 
 
 
+**5.	Other Biological File Formats**
 
+Biological data can also be represented in different formats based on the information required and the analysis carried out. EMBL is a file format used to represent DNA and protein sequence and is used by various DNA sequence programs. Specific tools use specific data formats to store a large amount of bioinformatic data. Some examples of data formats in bioinformatics are FASTA format, Genbank file format, EMBL format, Swiss-prot format, DDBJ format, GDE Format, NBRF/PIR Format, Multiple Sequence Alignment Data Format includes (GCG/MSF format and ALN/Clustal Format) Structural Data Format includes PDB Format, Annotation Data Formats includes GFF, GFF2, GFF3 Format, NGS Data Formats includes SAM/BAM Format, Annotation Data Formats includes FASTQ Format. Other file formats like
+
+    SFF(Standard flowgram format) and ABI-binary file format containing sanger sequencing sequence and trace data.
+   
+    MDL- contains information regarding small molecules (2D structure data)
+
+    SBML (System Biology Markup Language)- Contains list of reactants, products, reactions, enzymes etc. associated with a metabolic/ signalling pathway
+ &nbsp;
 
 ### Algorithm to develop a file format simulator
 
