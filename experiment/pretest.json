@@ -64,6 +64,58 @@
 
       "correctAnswer": "c",
       "difficulty": "beginner"
+    },
+    
+    {
+      "question": "6. FASTA format is used primarily for ",
+      "answers": {
+        "a": "Representing DNA sequences",
+        "b": "Representing amino acid sequences",
+        "c": "Visualization tool for sequence alignment",
+        "d": "Sharing and exchanging of biological data"
+      },
+
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    
+    {
+      "question": "7. Maximum file length of a FASTA file format ",
+      "answers": {
+        "a": "1-50 characters",
+        "b": "1-100 characters",
+        "c": "Greater than 100 characters",
+        "d": "No fixed limit"
+      },
+
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    
+    {
+      "question": "8. FASTQ format is a ",
+      "answers": {
+        "a": "numerical code-based format",
+        "b": "text-based format ",
+        "c": "symbol-based format",
+        "d": "none of the above"
+      },
+
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    
+    {
+      "question": "9. Quality scores are calculated in which of the following file format. ",
+      "answers": {
+        "a": "FASTA",
+        "b": "FASTQ",
+        "c": "EMBL",
+        "d": "GenBank"
+      },
+
+      "correctAnswer": "b",
+      "difficulty": "beginner"
     }
   ]
 }
