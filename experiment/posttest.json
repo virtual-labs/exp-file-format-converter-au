@@ -66,25 +66,7 @@
     },
 
     {
-      "question": "6. Identify the file format of the given sequence
-Sample sequence
-@SEQ_ID
-GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
-+
-!''((((**+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65 ",
-      "answers": {
-        "a": "DDBJ",
-        "b": "EMBL",
-        "c": "GenBank",
-        "d": "FASTQ"
-      },
-          
-      "correctAnswer": "d",
-      "difficulty": "beginner"
-    },
-
-    {
-      "question": "7. SQ (SeQuence header) in EMBL format indicates.",
+      "question": "6. SQ (SeQuence header) in EMBL format indicates.",
       "answers": {
         "a": "Beginning of the sequence data",
         "b": "Information of taxonomic classification.",
@@ -97,7 +79,7 @@ GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
     },
 
     {
-      "question": "8. GenBank File Format consists of",
+      "question": "7. GenBank File Format consists of",
       "answers": {
         "a": "Annotation section",
         "b": "Sequence section",
