@@ -50,6 +50,63 @@
           
       "correctAnswer": "d",
       "difficulty": "beginner"
+    },
+
+    {
+      "question": "5. Which file format will provide information regarding coding sequence?",
+      "answers": {
+        "a": "DDBJ",
+        "b": "EMBL",
+        "c": "GenBank",
+        "d": "FASTQ"
+      },
+          
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+
+    {
+      "question": "6. Identify the file format of the given sequence
+Sample sequence
+@SEQ_ID
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
++
+!''((((**+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65 ",
+      "answers": {
+        "a": "DDBJ",
+        "b": "EMBL",
+        "c": "GenBank",
+        "d": "FASTQ"
+      },
+          
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+
+    {
+      "question": "7. SQ (SeQuence header) in EMBL format indicates.",
+      "answers": {
+        "a": "Beginning of the sequence data",
+        "b": "Information of taxonomic classification.",
+        "c": "General descriptive information about the sequence stored.",
+        "d": "Mechanism for the annotation of the sequence data."
+      },
+          
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+
+    {
+      "question": "8. GenBank File Format consists of",
+      "answers": {
+        "a": "Annotation section",
+        "b": "Sequence section",
+        "c": "Both annotation section and sequence section",
+        "d": "Only origin information"
+      },
+          
+      "correctAnswer": "c",
+      "difficulty": "beginner"
     }
   ]
 }
