@@ -54,7 +54,7 @@
 			width: 100%;
  	 		max-width: 50%;
   			min-height: 100%;
-			font-size: 1vw;
+			font-size: 1.5vw;
 
 		}
 		.at-item {
@@ -67,9 +67,13 @@
          	margin-left: 10%;
 		}
 		button{
-			font-size: 1vw;
+			font-size: 1.75vw;
 			
 		}
+		h1{
+			font-size: 3vw;
+		}
+		
 		
 
 </style>
@@ -94,16 +98,17 @@
 <br>
     <div id="testbutton" align="center">
         <input type="file" id="actual-btn" accept=".txt" hidden onchange="obtainfiletype()"/>
-        <label for="actual-btn" style="cursor: pointer;font-size: 1vw;" >Select DNA sequence:</label>
-		&nbsp;<i class="fa fa-hand-o-left" style="font-size: 1.5vw;color:#4f2037;">&nbsp;Click here to upload file in .txt format</i> <br><br>
+        <label for="actual-btn" style="cursor: pointer;font-size: 1.5vw;" >Select DNA sequence:</label>
+		&nbsp;<i class="fa fa-hand-o-left" style="font-size: 2vw;color:#4f2037;">&nbsp;Click here to upload file in .txt format</i> 
+        <br><br>
+		<a href="Proto-oncogene vav_genebank.txt" download="sample_genbank.txt;"style="font-size: 2vw;">Sample_Genbank</a>&nbsp;&nbsp;&nbsp;
+	<a href="Proto-oncogene vav_embl.txt" download="sample_embl.txt;"style="font-size: 2vw;">Sample_EMBL</a>&nbsp;&nbsp;&nbsp;
+	<a href="Proto-oncogene vav_fasta.txt" download="sample_fasta.txt;"style="font-size: 2vw;">Sample_FASTA</a>
+        <br>
         <br>
         <textarea id="disp" cols="30" rows="10">
         </textarea><br>
-        <a href="Proto-oncogene vav_genebank.txt" download="sample_genbank.txt;"style="font-size: 1vw;">Sample_Genbank</a>&nbsp;&nbsp;&nbsp;
-	<a href="Proto-oncogene vav_embl.txt" download="sample_embl.txt;"style="font-size: 1vw;">Sample_EMBL</a>&nbsp;&nbsp;&nbsp;
-	<a href="Proto-oncogene vav_fasta.txt" download="sample_fasta.txt;"style="font-size: 1vw;">Sample_FASTA</a>
-        <br>
-        <br>
+        
         <p id="form"></p>
         <p id="demo"></p>
     </div>
@@ -146,7 +151,7 @@
 
         reader2.onerror = (e) => alert(e.target.error.name);
         reader2.readAsText(file);
-        document.getElementById("form").insertAdjacentHTML('beforeend', "<label for=\"File from\" style=\"background-color: white ; color: #802652; font-weight: bold;font-size: 1vw;\">Convert file from:</label><select name=\"Filefrom-name\" id=\"Filefrom-name\"><option value=\"EMBL\"style=\"font-size: 1vw;\">EMBL</option><option value=\"GENBANK\" style=\"font-size: 1vw;\">GENBANK</option></select><br><br><label for=\"File to\"style=\"background-color: white ; color: #802652; font-weight: bold;font-size: 1vw;\">Required file format:</label><select name=\"Fileto-name\" id=\"Fileto-name\" onchange=\"convert()\"><option value=\"embl;\">EMBL</option><option value=\"genbank\">GENBANK</option><option value=\"fasta\">FASTA</option></select>");
+        document.getElementById("form").insertAdjacentHTML('beforeend', "<label for=\"File from\" style=\"background-color: white ; color: #802652; font-weight: bold;font-size: 1.5vw;\">Convert file from:</label><select name=\"Filefrom-name\" id=\"Filefrom-name\"style=\"font-size: 1.5vw;\"><option value=\"EMBL\"style=\"font-size: 1.5vw;\">EMBL</option><option value=\"GENBANK\" style=\"font-size: 1.5vw;\">GENBANK</option></select><br><br><label for=\"File to\"style=\"background-color: white ; color: #802652; font-weight: bold;font-size: 1.5vw;\">Required file format:</label><select name=\"Fileto-name\" id=\"Fileto-name\" style=\"font-size: 1.5vw;\"onchange=\"convert()\"><option value=\"embl;\"style=\"font-size: 1.5vw;\">EMBL</option><option value=\"genbank\"style=\"font-size: 1.5vw;\">GENBANK</option><option value=\"fasta\"style=\"font-size: 1.5vw;\">FASTA</option></select>");
 		document.getElementById("actual-btn").disabled = true;
         });
         
@@ -203,7 +208,7 @@
 					const gen_fasta='>|'+newVersion+'|'+ newDefinition+'\n'+newstr;
 					//document.getElementById("result").innerHTML =("<h1> Results</h1>"+"\n"+"<textarea cols=\"63\" rows=\"25\">"+ gen_fasta +"	</textarea>");
 					//document.getElementById("result").innerHTML =gen_fasta;
-					document.getElementById("result").innerHTML =("<h3> Results</h3>"+"\n"+"<textarea id=\"res\" cols=\"80\" rows=\"25\">"+ gen_fasta+"</textarea> <br><br><br> <button onclick=saveTextAsFile(res.value,'"+newVersion+"_Genbank_converted.txt')>Download result</button>");
+					document.getElementById("result").innerHTML =("<h1> Results</h1>"+"\n"+"<textarea id=\"res\" cols=\"70\" rows=\"25\">"+ gen_fasta+"</textarea> <br><br> <button onclick=saveTextAsFile(res.value,'"+newVersion+"_Genbank_converted.txt')>Download result</button>");
 				}
 				else if(document.getElementById("Fileto-name"). value== "embl"||"genbank"){
 					alert("Required file format can be only fasta format");	
@@ -275,7 +280,7 @@
 					document.body.appendChild(downloadableLink);
 					downloadableLink.click();
 					document.body.removeChild(downloadableLink);*/
-					document.getElementById("result").innerHTML =("<h1> Results</h1>"+"\n"+"<textarea id=\"res\" cols=\"63\" rows=\"25\">"+ embl_fasta+"</textarea> <br><br><br> <button onclick=saveTextAsFile(res.value,'"+ acid +"_EMBL_converted.txt')>Download result</button>");
+					document.getElementById("result").innerHTML =("<h1> Results</h1>"+"\n"+"<textarea id=\"res\" cols=\"70\" rows=\"25\">"+ embl_fasta+"</textarea> <br><br> <button onclick=saveTextAsFile(res.value,'"+ acid +"_EMBL_converted.txt')>Download result</button>");
 
 				}
 				else if(document.getElementById("Fileto-name"). value== "embl"||"genbank"){
