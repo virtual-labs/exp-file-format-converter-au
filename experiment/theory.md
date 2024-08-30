@@ -27,7 +27,7 @@ Bioinformaticians created a plethora of bioinformatics software throughout the y
 
 A file format, often known as a file extension, refers to how data is structured within a file on a computer. File formatting enables software to access data, properly understand the data, and continue with processing. A series of file formats known as biological file formats are used since it is now possible to store enormous biological data digitally. The file formats used in bioinformatics and genome sequence analysis methods include different data file formats, alignment file formats, and annotation file formats. Each data file format was developed with its purposes in computational research. Some of the advantages of these file formats are:
 
-     • Compatibility per specific software (for visualizations, diagrams, and mappings).
+                 • Compatibility per specific software (for visualizations, diagrams, and mappings).
 
      • Simple text for easy data processing, parsing, and human readability.
 
@@ -79,21 +79,21 @@ A FASTA file can contain multiple sequences. Each sequence will be separated by 
 The FASTQ format is also a text-based format to represent nucleotide sequences, but also contains the corresponding quality of each nucleotide. It is the standard for storing the output of high-throughput sequencing instruments such as the Illumina machines.
 An example sequence in FASTQ format:
 
-@SEQ_ID <br>
-GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT <br>
-\+<br>
+@SEQ_ID 
+GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT 
+\+
 !''*((((***+))%%%++)(%%%%).1***-+*''))**55CCF>>>>>>CCCCCCC65
 
 
-A FASTQ file uses four lines per sequence:<br>
+A FASTQ file uses four lines per sequence:
 
-      •	Line 1 begins with a '@' character and is followed by a sequence identifier and an optional description (like a FASTA title line).<br>
+      •	Line 1 begins with a '@' character and is followed by a sequence identifier and an optional description (like a FASTA title line).
 
-      •	Line 2 is the raw sequence.<br>
+      •	Line 2 is the raw sequence.
 
-      •	Line 3 begins with a '+' character and is optionally followed by the same sequence identifier (and any description) again.<br>
+      •	Line 3 begins with a '+' character and is optionally followed by the same sequence identifier (and any description) again.
 
-      •	Line 4 encodes the quality values for the sequence in Line 2 and must contain the same number of symbols as in the sequence.<br>
+      •	Line 4 encodes the quality values for the sequence in Line 2 and must contain the same number of symbols as in the sequence.
 
 &nbsp;
 &nbsp;
@@ -198,47 +198,47 @@ Figure 3: EMBL file format for the Akt1 mRNA sequence for the organism _Danio re
 
 Explanation:
 
-      •	The **ID** (IDentification line) line is always the first line of an entry.<br>
+      •	The **ID** (IDentification line) line is always the first line of an entry.
 
-      •	The **XX** line contains no data or comments. It is used instead of blank lines to avoid confusion with the sequence data lines.<br>
+      •	The **XX** line contains no data or comments. It is used instead of blank lines to avoid confusion with the sequence data lines.
 
-      •	The **AC** (Accession Number) line lists the accession numbers associated with this entry.<br>
+      •	The **AC** (Accession Number) line lists the accession numbers associated with this entry.
 
-      •	The **DT** (Date) line shows when an entry appeared in the database and when it was last updated.<br>
+      •	The **DT** (Date) line shows when an entry appeared in the database and when it was last updated.
 
-      •	The **DE**(DEscription) lines contain general descriptive information about the sequence stored.<br>
+      •	The **DE**(DEscription) lines contain general descriptive information about the sequence stored.
 
-      •	The **KW** (KeyWord) lines provide information that can be used to generate cross-reference indexes of the sequence entries based on functional, structural, or other categories deemed important. The keywords chosen for each entry serve as a subject reference for the sequence and will be expanded as work with the database continues. Often several KW lines are necessary for a single entry.<br>
+      •	The **KW** (KeyWord) lines provide information that can be used to generate cross-reference indexes of the sequence entries based on functional, structural, or other categories deemed important. The keywords chosen for each entry serve as a subject reference for the sequence and will be expanded as work with the database continues. Often several KW lines are necessary for a single entry.
 
-      •	The **OS** (Organism Species) line specifies the preferred scientific name of the organism which was the source of the stored sequence.<br>
+      •	The **OS** (Organism Species) line specifies the preferred scientific name of the organism which was the source of the stored sequence.
 
-      •	The **OC** (Organism Classification) lines contain the taxonomic classification of the source organism.<br>
+      •	The **OC** (Organism Classification) lines contain the taxonomic classification of the source organism.
 
-      •	The **RN**(Reference Number) line gives a unique number to each reference citation within an entry. <br>
+      •	The **RN**(Reference Number) line gives a unique number to each reference citation within an entry. 
 
-      •	The **RC** (Reference Comment) line type is an optional line type that appears if the reference has a comment.<br>
+      •	The **RC** (Reference Comment) line type is an optional line type that appears if the reference has a comment.
 
-      •	The **RP** (Reference Position) line type is an optional line type that appears if one or more contiguous base spans of the presented sequence can be attributed to the reference in question.<br>
+      •	The **RP** (Reference Position) line type is an optional line type that appears if one or more contiguous base spans of the presented sequence can be attributed to the reference in question.
 
-      •	The **RX** (Reference Cross-reference) line type is an optional line type which contains a cross-reference to an external citation or abstract database.<br>
+      •	The **RX** (Reference Cross-reference) line type is an optional line type which contains a cross-reference to an external citation or abstract database.
 
-      •	The **RA** (Reference Author) lines list the authors of the paper (or other work) cited.<br>
+      •	The **RA** (Reference Author) lines list the authors of the paper (or other work) cited.
 
-      •	The **RT** (Reference Title) lines give the paper’s title (or other work).<br>
+      •	The **RT** (Reference Title) lines give the paper’s title (or other work).
 
-      •	The **RL** (Reference Location) line contains the conventional citation information for the reference.<br>
+      •	The **RL** (Reference Location) line contains the conventional citation information for the reference.
 
-      •	The **DR** (Database Cross-Reference) line cross-references other databases which contain information related to the entry in which the DR line appears.<br>
+      •	The **DR** (Database Cross-Reference) line cross-references other databases which contain information related to the entry in which the DR line appears.
 
-      •	The **CC** lines are free text comments about the entry and may be used to convey any sort of information thought to be useful.<br>
+      •	The **CC** lines are free text comments about the entry and may be used to convey any sort of information thought to be useful.
 
-      •	The **FH** (Feature Header) lines are present only to improve the readability of an entry when it is printed or displayed on a terminal screen. The lines contain no data and may be ignored by computer programs.<br>
+      •	The **FH** (Feature Header) lines are present only to improve the readability of an entry when it is printed or displayed on a terminal screen. The lines contain no data and may be ignored by computer programs.
 
-      •	The **FT** (Feature Table) lines provide a mechanism for annotating the sequence data. Regions or sites in the sequence of interest are listed in the table.<br>
+      •	The **FT** (Feature Table) lines provide a mechanism for annotating the sequence data. Regions or sites in the sequence of interest are listed in the table.
 
-      •	The **SQ** (Sequence header) line marks the beginning of the sequence data and gives a summary of its content.<br>. The sequence starts in the next line and is written 60 bases per line, in groups of 10 bases separated by a blank character, beginning in position 6 of the line. The direction listed is always 5' to 3'.<br>
+      •	The **SQ** (Sequence header) line marks the beginning of the sequence data and gives a summary of its content.. The sequence starts in the next line and is written 60 bases per line, in groups of 10 bases separated by a blank character, beginning in position 6 of the line. The direction listed is always 5' to 3'.
 
-      •	The **//**(terminator) line also contains no data or comments. It designates the end of an entry.<br>
+      •	The **//**(terminator) line also contains no data or comments. It designates the end of an entry.
 
 
 &nbsp;
