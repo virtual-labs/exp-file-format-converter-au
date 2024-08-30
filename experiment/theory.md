@@ -211,11 +211,9 @@ Figure 3: EMBL file format for the Akt1 mRNA sequence for the organism _Danio re
    
    
 
-Explanation:
-
-      * The **ID** (IDentification line) line is always the first line of an entry.
-
-      * The **XX** line contains no data or comments. It is used instead of blank lines to avoid confusion with the sequence data lines.
+The major tags and their explanation is as follows:
+ * The **ID** (IDentification line) line is always the first line of an entry.
+ * The **XX** line contains no data or comments. It is used instead of blank lines to avoid confusion with the sequence data lines.
 
       * The **AC** (Accession Number) line lists the accession numbers associated with this entry.
 
