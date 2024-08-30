@@ -1,10 +1,10 @@
 <b>List of Abbreviations</b>
 
-<p align=left> Deoxyribonucleic acid - DNA
+<p align=left> *Deoxyribonucleic acid - DNA
   
-Ribonucleic acid - RNA  
+*Ribonucleic acid - RNA  
 
-European Molecular Biology Laboratory - EMBL
+*European Molecular Biology Laboratory - EMBL
 
 European Bioinformatics Institute -EBI
 
