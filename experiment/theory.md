@@ -1,13 +1,14 @@
 <b>List of Abbreviations</b>
 
 <p align=left> 
-* Deoxyribonucleic acid - DNA
+
+  * Deoxyribonucleic acid - DNA
   
 * Ribonucleic acid - RNA  
 
 * European Molecular Biology Laboratory - EMBL
 
-European Bioinformatics Institute -EBI
+* European Bioinformatics Institute -EBI
 
 DNA Data Bank of Japan - DDBJ
 
