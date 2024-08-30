@@ -1,18 +1,30 @@
 <b>List of Abbreviations</b>
 
-            Deoxyribonucleic acid - DNA
-      Ribonucleic acid - RNA  
-      European Molecular Biology Laboratory - EMBL
-      European Bioinformatics Institute -EBI
-      DNA Data Bank of Japan - DDBJ
-      Protein Data Bank –PDB
-      Protein Information Resource -PIR
-      Next-generation sequencing -NGS
-      Sequence Alignment and Map -SAM
-      Binary Alignment and Map -BAM
-      General Feature Format -GFF
-      National Biomedical Research Foundation -NBRF
-   
+<p align=left> *Deoxyribonucleic acid - DNA
+  
+*Ribonucleic acid - RNA  
+
+*European Molecular Biology Laboratory - EMBL
+
+European Bioinformatics Institute -EBI
+
+DNA Data Bank of Japan - DDBJ
+
+Protein Data Bank –PDB
+
+Protein Information Resource -PIR
+
+Next-generation sequencing -NGS
+
+Sequence Alignment and Map -SAM
+
+Binary Alignment and Map -BAM
+
+General Feature Format -GFF
+
+National Biomedical Research Foundation -NBRF
+
+</p>
 
 &nbsp;
 
