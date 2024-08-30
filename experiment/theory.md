@@ -1,6 +1,7 @@
 <b>List of Abbreviations</b>
 
-<p align=left> * Deoxyribonucleic acid - DNA
+<p align=left> 
+* Deoxyribonucleic acid - DNA
   
 * Ribonucleic acid - RNA  
 
