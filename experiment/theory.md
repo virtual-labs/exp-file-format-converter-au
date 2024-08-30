@@ -42,11 +42,14 @@ Bioinformaticians created a plethora of bioinformatics software throughout the y
 A file format, often known as a file extension, refers to how data is structured within a file on a computer. File formatting enables software to access data, properly understand the data, and continue with processing. A series of file formats known as biological file formats are used since it is now possible to store enormous biological data digitally. The file formats used in bioinformatics and genome sequence analysis methods include different data file formats, alignment file formats, and annotation file formats. Each data file format was developed with its purposes in computational research. Some of the advantages of these file formats are:
 
 
-<p> * Compatibility per specific software (for visualizations, diagrams, and mappings).
+<p> 
+ 
+* Compatibility per specific software (for visualizations, diagrams, and mappings).
 
 * Simple text for easy data processing, parsing, and human readability.
 
-* Improve efficiency for computers. 
+* Improve efficiency for computers.
+</p>
 
 
 #### Some Sequence File Formats in Bioinformatics
