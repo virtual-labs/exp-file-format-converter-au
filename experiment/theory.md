@@ -41,11 +41,12 @@ Bioinformaticians created a plethora of bioinformatics software throughout the y
 
 A file format, often known as a file extension, refers to how data is structured within a file on a computer. File formatting enables software to access data, properly understand the data, and continue with processing. A series of file formats known as biological file formats are used since it is now possible to store enormous biological data digitally. The file formats used in bioinformatics and genome sequence analysis methods include different data file formats, alignment file formats, and annotation file formats. Each data file format was developed with its purposes in computational research. Some of the advantages of these file formats are:
 
-                 • Compatibility per specific software (for visualizations, diagrams, and mappings).
 
-     • Simple text for easy data processing, parsing, and human readability.
+<p> * Compatibility per specific software (for visualizations, diagrams, and mappings).
 
-     • Improve efficiency for computers. 
+* Simple text for easy data processing, parsing, and human readability.
+
+* Improve efficiency for computers. 
 
 
 #### Some Sequence File Formats in Bioinformatics
@@ -101,13 +102,13 @@ GATTTGGGGTTCAAAGCAGTATCGATCAAATAGTAAATCCATTTGTTCAACTCACAGTTT
 
 A FASTQ file uses four lines per sequence:
 
-      •	Line 1 begins with a '@' character and is followed by a sequence identifier and an optional description (like a FASTA title line).
+      * Line 1 begins with a '@' character and is followed by a sequence identifier and an optional description (like a FASTA title line).
 
-      •	Line 2 is the raw sequence.
+      * Line 2 is the raw sequence.
 
-      •	Line 3 begins with a '+' character and is optionally followed by the same sequence identifier (and any description) again.
+      * Line 3 begins with a '+' character and is optionally followed by the same sequence identifier (and any description) again.
 
-      •	Line 4 encodes the quality values for the sequence in Line 2 and must contain the same number of symbols as in the sequence.
+      * Line 4 encodes the quality values for the sequence in Line 2 and must contain the same number of symbols as in the sequence.
 
 &nbsp;
 &nbsp;
@@ -131,13 +132,13 @@ An example of GenBank sequence is shown below:
 
 Each tag in the Genbank format is briefly described below:
 
-•	**LOCUS:** The LOCUS field contains a number of different data elements, including locus name, sequence length, molecule type, GenBank division, and modification date. The locus name was originally designed to help group entries with similar sequences: the first three characters usually designated the organism; the fourth and fifth characters were used to show other group designations, such as gene product; for segmented entries, the last character was one of a series of sequential integers. However, the 10 characters in the locus name are no longer sufficient to represent the amount of information originally intended to be contained in the locus name. The only rule now applied in assigning a locus name is that it must be unique. For example, for GenBank records that have 6-character accessions (e.g., U12345), the locus name is usually the first letter of the genus and species names, followed by the accession number. For 8-character, character accessions (e.g., AF123456), the locus name is just the accession number.
+* **LOCUS:** The LOCUS field contains a number of different data elements, including locus name, sequence length, molecule type, GenBank division, and modification date. The locus name was originally designed to help group entries with similar sequences: the first three characters usually designated the organism; the fourth and fifth characters were used to show other group designations, such as gene product; for segmented entries, the last character was one of a series of sequential integers. However, the 10 characters in the locus name are no longer sufficient to represent the amount of information originally intended to be contained in the locus name. The only rule now applied in assigning a locus name is that it must be unique. For example, for GenBank records that have 6-character accessions (e.g., U12345), the locus name is usually the first letter of the genus and species names, followed by the accession number. For 8-character, character accessions (e.g., AF123456), the locus name is just the accession number.
 
-•	**SEQUENCE LENGTH:** Number of nucleotide base pairs (or amino acid residues) in the sequence record. In this example, the sequence length is 1425bp.There is no maximum limit on the size of a sequence that can be submitted to GenBank. We can submit a whole genome if we have a contiguous piece of sequence from a single molecule type. However, there is a limit of 350 kb on an individual GenBank record. That limit was agreed upon by the international collaborating sequence databases to facilitate handling of sequence data by various software programs. The minimum length required for submission is 50 bp.
+* **SEQUENCE LENGTH:** Number of nucleotide base pairs (or amino acid residues) in the sequence record. In this example, the sequence length is 1425bp.There is no maximum limit on the size of a sequence that can be submitted to GenBank. We can submit a whole genome if we have a contiguous piece of sequence from a single molecule type. However, there is a limit of 350 kb on an individual GenBank record. That limit was agreed upon by the international collaborating sequence databases to facilitate handling of sequence data by various software programs. The minimum length required for submission is 50 bp.
 
-•	**MOLECULE TYPE:** The type of molecule that was sequenced. In this example, the molecule type is mRNA. Each GenBank record must contain contiguous sequence data from a single molecule type. The various molecule types are described in the Sequin documentation and can include genomic DNA, genomic RNA, precursor RNA, mRNA (cDNA), ribosomal RNA, transfer RNA, small nuclear RNA, and small cytoplasmic RNA.
+* **MOLECULE TYPE:** The type of molecule that was sequenced. In this example, the molecule type is mRNA. Each GenBank record must contain contiguous sequence data from a single molecule type. The various molecule types are described in the Sequin documentation and can include genomic DNA, genomic RNA, precursor RNA, mRNA (cDNA), ribosomal RNA, transfer RNA, small nuclear RNA, and small cytoplasmic RNA.
 
-•	**GENBANK DIVISION:** The GenBank division to which a record belongs is indicated with a three letter abbreviation. In this example, GenBank division is VRT. The GenBank database is divided into 18 divisions:
+* **GENBANK DIVISION:** The GenBank division to which a record belongs is indicated with a three letter abbreviation. In this example, GenBank division is VRT. The GenBank database is divided into 18 divisions:
    1.	PRI - primate sequences
    2.	ROD - rodent sequences
    3.	MAM - other mammalian sequences
@@ -157,37 +158,37 @@ Each tag in the Genbank format is briefly described below:
    17.	HTC - unfinished high-throughput cDNA sequencing
    18.	ENV - environmental sampling sequences
 
-•	**MODIFICATION DATE:** The date in the LOCUS field is the date of last modification. The sample record shown here was last modified on 12-MAR-2013.
+* **MODIFICATION DATE:** The date in the LOCUS field is the date of last modification. The sample record shown here was last modified on 12-MAR-2013.
 
-•	**DEFINITION:** Definition means the brief description of sequence; ie information such as source organism, gene name/protein name, or some description of the sequence's function (if the sequence is non-coding). If the sequence has a coding region (CDS), description may be followed by a completeness qualifier, such as "complete cds".
+* **DEFINITION:** Definition means the brief description of sequence; ie information such as source organism, gene name/protein name, or some description of the sequence's function (if the sequence is non-coding). If the sequence has a coding region (CDS), description may be followed by a completeness qualifier, such as "complete cds".
 
-•	**ACCESSION:** The unique identifier for a sequence record. An accession number applies to the complete record and is usually a combination of a letter(s) and numbers, such as a single letter followed by five digits (e.g., U12345) or two letters followed by six digits (e.g., JX307852). Some accessions might be longer, depending on the type of sequence record. 
+* **ACCESSION:** The unique identifier for a sequence record. An accession number applies to the complete record and is usually a combination of a letter(s) and numbers, such as a single letter followed by five digits (e.g., U12345) or two letters followed by six digits (e.g., JX307852). Some accessions might be longer, depending on the type of sequence record. 
 
-•	**VERSION:** A nucleotide sequence identification number that represents a single, specific sequence in the GenBank database. This identification number uses the accession.version format implemented by GenBank/EMBL/DDBJ in February 1999.If there is any change to the sequence data (even a single base), the version number will be increased,e.g., U12345.1 → U12345.2, but the accession portion will remain stable. 
+* **VERSION:** A nucleotide sequence identification number that represents a single, specific sequence in the GenBank database. This identification number uses the accession.version format implemented by GenBank/EMBL/DDBJ in February 1999.If there is any change to the sequence data (even a single base), the version number will be increased,e.g., U12345.1 → U12345.2, but the accession portion will remain stable. 
 
-•	**KEYWORDS:** Word or phrase describing the sequence. If no keywords are included in the entry, the field contains only a period. Keywords are generally present in older records. They are not included in newer records unless: (1) they are not redundant with any feature, qualifier, or other information present in the record; or (2) the submitter specifically asks for them to be added and #1 is true; or (3) the record contains a special type of sequence such as EST, STS, GSS, HTG, etc.
+* **KEYWORDS:** Word or phrase describing the sequence. If no keywords are included in the entry, the field contains only a period. Keywords are generally present in older records. They are not included in newer records unless: (1) they are not redundant with any feature, qualifier, or other information present in the record; or (2) the submitter specifically asks for them to be added and #1 is true; or (3) the record contains a special type of sequence such as EST, STS, GSS, HTG, etc.
 
-•	**SOURCE:** Free-format information including an abbreviated form of the organism name, sometimes followed by a molecule type.
+* **SOURCE:** Free-format information including an abbreviated form of the organism name, sometimes followed by a molecule type.
 
-•	**ORGANISM:** The formal scientific name for the source organism (genus and species) and its lineage, based on the phylogenetic classification scheme were described in the tag.
+* **ORGANISM:** The formal scientific name for the source organism (genus and species) and its lineage, based on the phylogenetic classification scheme were described in the tag.
 
-•	**REFERENCE:** Publications by the authors of the sequence that discuss the data reported in the record. References are automatically sorted within the record based on date of publication, showing the oldest references first. Various classes of publication can be present in the References field, including journal article, book chapter, book, thesis/monograph, proceedings chapter, proceedings from a meeting, and patent.
+* **REFERENCE:** Publications by the authors of the sequence that discuss the data reported in the record. References are automatically sorted within the record based on date of publication, showing the oldest references first. Various classes of publication can be present in the References field, including journal article, book chapter, book, thesis/monograph, proceedings chapter, proceedings from a meeting, and patent.
 
-•	**AUTHORS:** List of authors in the order in which they appear in the cited article.
+* **AUTHORS:** List of authors in the order in which they appear in the cited article.
 
-•	**TITLE:** Title of the published work or tentative title of an unpublished work.
+* **TITLE:** Title of the published work or tentative title of an unpublished work.
 
-•	**PUBMED:** PubMed Identifier (PMID): References that include PubMed IDs contain links from the sequence record to the corresponding PubMed record. 
+* **PUBMED:** PubMed Identifier (PMID): References that include PubMed IDs contain links from the sequence record to the corresponding PubMed record. 
 
-•	**FEATURES:** Information about genes and gene products, as well as regions of biological significance reported in the sequence. These can include regions of the sequence that code for proteins and RNA molecules, as well as a number of other features.
+* **FEATURES:** Information about genes and gene products, as well as regions of biological significance reported in the sequence. These can include regions of the sequence that code for proteins and RNA molecules, as well as a number of other features.
 
-•	**SOURCE:** Mandatory feature in each record that summarizes the length of the sequence, scientific name of the source organism, and Taxon ID number. Can also include other information such as map location, strain, clone, tissue type, etc., if provided by submitter.
+* **SOURCE:** Mandatory feature in each record that summarizes the length of the sequence, scientific name of the source organism, and Taxon ID number. Can also include other information such as map location, strain, clone, tissue type, etc., if provided by submitter.
 
-•	**TAXON:** A stable unique identification number for the taxon of the source organism. A taxonomy ID number is assigned to each taxon (species, genus, family, etc.) in the NCBI Taxonomy Database.
+* **TAXON:** A stable unique identification number for the taxon of the source organism. A taxonomy ID number is assigned to each taxon (species, genus, family, etc.) in the NCBI Taxonomy Database.
 
-•	**.CDS:** Coding sequence; region of nucleotides that corresponds with the sequence of amino acids in a protein (location includes start and stop codons). The CDS feature includes an amino acid translation. Authors can specify the nature of the CDS by using the qualifier "/evidence=experimental" or "/evidence=not_experimental". Submitters are also encouraged to annotate the mRNA feature, which includes the 5' untranslated region (5'UTR), coding sequences (CDS, exon), and 3' untranslated region (3'UTR).
+* **.CDS:** Coding sequence; region of nucleotides that corresponds with the sequence of amino acids in a protein (location includes start and stop codons). The CDS feature includes an amino acid translation. Authors can specify the nature of the CDS by using the qualifier "/evidence=experimental" or "/evidence=not_experimental". Submitters are also encouraged to annotate the mRNA feature, which includes the 5' untranslated region (5'UTR), coding sequences (CDS, exon), and 3' untranslated region (3'UTR).
 
-•	**ORIGIN:** The ORIGIN tag represents the sequence data which is displayed in the next sequence. The ORIGIN may be left blank, may appear as "Unreported," or may give a local pointer to the sequence start, usually involving an experimentally determined restriction cleavage site or the genetic locus. This information is present only in older records.  
+* **ORIGIN:** The ORIGIN tag represents the sequence data which is displayed in the next sequence. The ORIGIN may be left blank, may appear as "Unreported," or may give a local pointer to the sequence start, usually involving an experimentally determined restriction cleavage site or the genetic locus. This information is present only in older records.  
 
 
 
@@ -212,47 +213,47 @@ Figure 3: EMBL file format for the Akt1 mRNA sequence for the organism _Danio re
 
 Explanation:
 
-      •	The **ID** (IDentification line) line is always the first line of an entry.
+      * The **ID** (IDentification line) line is always the first line of an entry.
 
-      •	The **XX** line contains no data or comments. It is used instead of blank lines to avoid confusion with the sequence data lines.
+      * The **XX** line contains no data or comments. It is used instead of blank lines to avoid confusion with the sequence data lines.
 
-      •	The **AC** (Accession Number) line lists the accession numbers associated with this entry.
+      * The **AC** (Accession Number) line lists the accession numbers associated with this entry.
 
-      •	The **DT** (Date) line shows when an entry appeared in the database and when it was last updated.
+      * The **DT** (Date) line shows when an entry appeared in the database and when it was last updated.
 
-      •	The **DE**(DEscription) lines contain general descriptive information about the sequence stored.
+      * The **DE**(DEscription) lines contain general descriptive information about the sequence stored.
 
-      •	The **KW** (KeyWord) lines provide information that can be used to generate cross-reference indexes of the sequence entries based on functional, structural, or other categories deemed important. The keywords chosen for each entry serve as a subject reference for the sequence and will be expanded as work with the database continues. Often several KW lines are necessary for a single entry.
+      * The **KW** (KeyWord) lines provide information that can be used to generate cross-reference indexes of the sequence entries based on functional, structural, or other categories deemed important. The keywords chosen for each entry serve as a subject reference for the sequence and will be expanded as work with the database continues. Often several KW lines are necessary for a single entry.
 
-      •	The **OS** (Organism Species) line specifies the preferred scientific name of the organism which was the source of the stored sequence.
+      * The **OS** (Organism Species) line specifies the preferred scientific name of the organism which was the source of the stored sequence.
 
-      •	The **OC** (Organism Classification) lines contain the taxonomic classification of the source organism.
+      * The **OC** (Organism Classification) lines contain the taxonomic classification of the source organism.
 
-      •	The **RN**(Reference Number) line gives a unique number to each reference citation within an entry. 
+      * The **RN**(Reference Number) line gives a unique number to each reference citation within an entry. 
 
-      •	The **RC** (Reference Comment) line type is an optional line type that appears if the reference has a comment.
+      * The **RC** (Reference Comment) line type is an optional line type that appears if the reference has a comment.
 
-      •	The **RP** (Reference Position) line type is an optional line type that appears if one or more contiguous base spans of the presented sequence can be attributed to the reference in question.
+      * The **RP** (Reference Position) line type is an optional line type that appears if one or more contiguous base spans of the presented sequence can be attributed to the reference in question.
 
-      •	The **RX** (Reference Cross-reference) line type is an optional line type which contains a cross-reference to an external citation or abstract database.
+      * The **RX** (Reference Cross-reference) line type is an optional line type which contains a cross-reference to an external citation or abstract database.
 
-      •	The **RA** (Reference Author) lines list the authors of the paper (or other work) cited.
+      * The **RA** (Reference Author) lines list the authors of the paper (or other work) cited.
 
-      •	The **RT** (Reference Title) lines give the paper’s title (or other work).
+      * The **RT** (Reference Title) lines give the paper’s title (or other work).
 
-      •	The **RL** (Reference Location) line contains the conventional citation information for the reference.
+      * The **RL** (Reference Location) line contains the conventional citation information for the reference.
 
-      •	The **DR** (Database Cross-Reference) line cross-references other databases which contain information related to the entry in which the DR line appears.
+      * The **DR** (Database Cross-Reference) line cross-references other databases which contain information related to the entry in which the DR line appears.
 
-      •	The **CC** lines are free text comments about the entry and may be used to convey any sort of information thought to be useful.
+      * The **CC** lines are free text comments about the entry and may be used to convey any sort of information thought to be useful.
 
-      •	The **FH** (Feature Header) lines are present only to improve the readability of an entry when it is printed or displayed on a terminal screen. The lines contain no data and may be ignored by computer programs.
+      * The **FH** (Feature Header) lines are present only to improve the readability of an entry when it is printed or displayed on a terminal screen. The lines contain no data and may be ignored by computer programs.
 
-      •	The **FT** (Feature Table) lines provide a mechanism for annotating the sequence data. Regions or sites in the sequence of interest are listed in the table.
+      * The **FT** (Feature Table) lines provide a mechanism for annotating the sequence data. Regions or sites in the sequence of interest are listed in the table.
 
-      •	The **SQ** (Sequence header) line marks the beginning of the sequence data and gives a summary of its content.. The sequence starts in the next line and is written 60 bases per line, in groups of 10 bases separated by a blank character, beginning in position 6 of the line. The direction listed is always 5' to 3'.
+      * The **SQ** (Sequence header) line marks the beginning of the sequence data and gives a summary of its content.. The sequence starts in the next line and is written 60 bases per line, in groups of 10 bases separated by a blank character, beginning in position 6 of the line. The direction listed is always 5' to 3'.
 
-      •	The **//**(terminator) line also contains no data or comments. It designates the end of an entry.
+      * The **//**(terminator) line also contains no data or comments. It designates the end of an entry.
 
 
 &nbsp;
