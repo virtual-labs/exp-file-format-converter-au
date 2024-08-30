@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <html>
 <style>
-	    input[type=text], select {
+	input[type=button]{
+            width: 20%;
+            background-color: #671834;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }    
+	input[type=text], select {
   			width: 50%;
 			font-size: 1vw;
   			padding: 1% 1%;
@@ -110,9 +121,12 @@
         </textarea><br>
         
         <p id="form"></p>
+	    <a href="index.html">
+            <input type="button" id=Reset value="Reset">
+            </a>
         <p id="demo"></p>
     </div>
-    <hr />
+    <hr/>
     <p id="result" style="margin-left: 35%; color:#802652"></p>
 	</body>
     <script>
