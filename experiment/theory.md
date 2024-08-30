@@ -10,21 +10,21 @@
 
 * European Bioinformatics Institute -EBI
 
-DNA Data Bank of Japan - DDBJ
+* DNA Data Bank of Japan - DDBJ
 
-Protein Data Bank –PDB
+* Protein Data Bank –PDB
 
-Protein Information Resource -PIR
+* Protein Information Resource -PIR
 
-Next-generation sequencing -NGS
+* Next-generation sequencing -NGS
 
-Sequence Alignment and Map -SAM
+* Sequence Alignment and Map -SAM
 
-Binary Alignment and Map -BAM
+* Binary Alignment and Map -BAM
 
-General Feature Format -GFF
+* General Feature Format -GFF
 
-National Biomedical Research Foundation -NBRF
+* National Biomedical Research Foundation -NBRF
 
 </p>
 
