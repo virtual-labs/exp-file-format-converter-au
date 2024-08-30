@@ -214,20 +214,13 @@ Figure 3: EMBL file format for the Akt1 mRNA sequence for the organism _Danio re
 The major tags and their explanation is as follows:
  * The **ID** (IDentification line) line is always the first line of an entry.
  * The **XX** line contains no data or comments. It is used instead of blank lines to avoid confusion with the sequence data lines.
-
-      * The **AC** (Accession Number) line lists the accession numbers associated with this entry.
-
-      * The **DT** (Date) line shows when an entry appeared in the database and when it was last updated.
-
-      * The **DE**(DEscription) lines contain general descriptive information about the sequence stored.
-
-      * The **KW** (KeyWord) lines provide information that can be used to generate cross-reference indexes of the sequence entries based on functional, structural, or other categories deemed important. The keywords chosen for each entry serve as a subject reference for the sequence and will be expanded as work with the database continues. Often several KW lines are necessary for a single entry.
-
-      * The **OS** (Organism Species) line specifies the preferred scientific name of the organism which was the source of the stored sequence.
-
-      * The **OC** (Organism Classification) lines contain the taxonomic classification of the source organism.
-
-      * The **RN**(Reference Number) line gives a unique number to each reference citation within an entry. 
+ * The **AC** (Accession Number) line lists the accession numbers associated with this entry.
+ * The **DT** (Date) line shows when an entry appeared in the database and when it was last updated.
+ * The **DE**(DEscription) lines contain general descriptive information about the sequence stored.
+ * The **KW** (KeyWord) lines provide information that can be used to generate cross-reference indexes of the sequence entries based on functional, structural, or other categories deemed important. The keywords chosen for each entry serve as a subject reference for the sequence and will be expanded as work with the database continues. Often several KW lines are necessary for a single entry.
+ * The **OS** (Organism Species) line specifies the preferred scientific name of the organism which was the source of the stored sequence.
+ * The **OC** (Organism Classification) lines contain the taxonomic classification of the source organism.
+ * The **RN**(Reference Number) line gives a unique number to each reference citation within an entry. 
 
       * The **RC** (Reference Comment) line type is an optional line type that appears if the reference has a comment.
 
@@ -263,12 +256,9 @@ The major tags and their explanation is as follows:
 **5.	Other Biological File Formats**
 
 Biological data can also be represented in different formats based on the information required and the analysis carried out. EMBL is a file format used to represent DNA and protein sequence and is used by various DNA sequence programs. Specific tools use specific data formats to store a large amount of bioinformatic data. Some examples of data formats in bioinformatics are FASTA format, Genbank file format, EMBL format, Swiss-prot format, DDBJ format, GDE Format, NBRF/PIR Format, Multiple Sequence Alignment Data Format includes (GCG/MSF format and ALN/Clustal Format) Structural Data Format includes PDB Format, Annotation Data Formats includes GFF, GFF2, GFF3 Format, NGS Data Formats includes SAM/BAM Format, Annotation Data Formats includes FASTQ Format. Other file formats like
-
-    SFF(Standard flowgram format) and ABI-binary file format containing sanger sequencing sequence and trace data.
-   
-    MDL- contains information regarding small molecules (2D structure data)
-
-    SBML (System Biology Markup Language)- Contains list of reactants, products, reactions, enzymes etc. associated with a metabolic/ signalling pathway
+* SFF(Standard flowgram format) and ABI-binary file format containing sanger sequencing sequence and trace data.
+* MDL- contains information regarding small molecules (2D structure data)
+* SBML (System Biology Markup Language)- Contains list of reactants, products, reactions, enzymes etc. associated with a metabolic/ signalling pathway
  &nbsp;
 
  
