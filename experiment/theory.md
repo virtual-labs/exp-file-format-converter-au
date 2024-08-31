@@ -220,31 +220,19 @@ The major tags and their explanation is as follows:
  * The **KW** (KeyWord) lines provide information that can be used to generate cross-reference indexes of the sequence entries based on functional, structural, or other categories deemed important. The keywords chosen for each entry serve as a subject reference for the sequence and will be expanded as work with the database continues. Often several KW lines are necessary for a single entry.
  * The **OS** (Organism Species) line specifies the preferred scientific name of the organism which was the source of the stored sequence.
  * The **OC** (Organism Classification) lines contain the taxonomic classification of the source organism.
- * The **RN**(Reference Number) line gives a unique number to each reference citation within an entry. 
-
-      * The **RC** (Reference Comment) line type is an optional line type that appears if the reference has a comment.
-
-      * The **RP** (Reference Position) line type is an optional line type that appears if one or more contiguous base spans of the presented sequence can be attributed to the reference in question.
-
-      * The **RX** (Reference Cross-reference) line type is an optional line type which contains a cross-reference to an external citation or abstract database.
-
-      * The **RA** (Reference Author) lines list the authors of the paper (or other work) cited.
-
-      * The **RT** (Reference Title) lines give the paper’s title (or other work).
-
-      * The **RL** (Reference Location) line contains the conventional citation information for the reference.
-
-      * The **DR** (Database Cross-Reference) line cross-references other databases which contain information related to the entry in which the DR line appears.
-
-      * The **CC** lines are free text comments about the entry and may be used to convey any sort of information thought to be useful.
-
-      * The **FH** (Feature Header) lines are present only to improve the readability of an entry when it is printed or displayed on a terminal screen. The lines contain no data and may be ignored by computer programs.
-
-      * The **FT** (Feature Table) lines provide a mechanism for annotating the sequence data. Regions or sites in the sequence of interest are listed in the table.
-
-      * The **SQ** (Sequence header) line marks the beginning of the sequence data and gives a summary of its content.. The sequence starts in the next line and is written 60 bases per line, in groups of 10 bases separated by a blank character, beginning in position 6 of the line. The direction listed is always 5' to 3'.
-
-      * The **//**(terminator) line also contains no data or comments. It designates the end of an entry.
+ * The **RN**(Reference Number) line gives a unique number to each reference citation within an entry.
+ * The **RC** (Reference Comment) line type is an optional line type that appears if the reference has a comment.
+ * The **RP** (Reference Position) line type is an optional line type that appears if one or more contiguous base spans of the presented sequence can be attributed to the reference in question.
+ * The **RX** (Reference Cross-reference) line type is an optional line type which contains a cross-reference to an external citation or abstract database.
+ * The **RA** (Reference Author) lines list the authors of the paper (or other work) cited.
+ * The **RT** (Reference Title) lines give the paper’s title (or other work).
+ * The **RL** (Reference Location) line contains the conventional citation information for the reference.
+ * The **DR** (Database Cross-Reference) line cross-references other databases which contain information related to the entry in which the DR line appears.
+ * The **CC** lines are free text comments about the entry and may be used to convey any sort of information thought to be useful.
+ * The **FH** (Feature Header) lines are present only to improve the readability of an entry when it is printed or displayed on a terminal screen. The lines contain no data and may be ignored by computer programs.
+ * The **FT** (Feature Table) lines provide a mechanism for annotating the sequence data. Regions or sites in the sequence of interest are listed in the table.
+ * The **SQ** (Sequence header) line marks the beginning of the sequence data and gives a summary of its content.. The sequence starts in the next line and is written 60 bases per line, in groups of 10 bases separated by a blank character, beginning in position 6 of the line. The direction listed is always 5' to 3'.
+ * The **//**(terminator) line also contains no data or comments. It designates the end of an entry.
 
 
 &nbsp;
