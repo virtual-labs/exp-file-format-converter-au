@@ -99,7 +99,7 @@ option {
         button {
             font-size: 0.8vw;
             width: 15%;
-            padding: 0.5%;
+            padding: 1%;
             height: 10px;
         }
         h1 {
@@ -122,8 +122,8 @@ option {
         <br><br>
         <textarea id="disp" cols="30" rows="10"></textarea><br>
         <a href="Proto-oncogene vav_genebank.txt" download="sample_genbank.txt">Sample_Genbank</a>&nbsp;&nbsp;
-    <a href="Proto-oncogene vav_embl.txt" download="sample_embl.txt">Sample_EMBL</a>&nbsp;&nbsp;
-    <a href="Proto-oncogene vav_fasta.txt" download="sample_fasta.txt">Sample_FASTA</a>
+	<a href="Proto-oncogene vav_embl.txt" download="sample_embl.txt">Sample_EMBL</a>&nbsp;&nbsp;
+	<a href="Proto-oncogene vav_fasta.txt" download="sample_fasta.txt">Sample_FASTA</a>
     <br>
     <br>
         <p id="form"></p>
@@ -219,119 +219,214 @@ option {
             displayResult(fastaFormat, `${version}_converted.fasta`);
         }
         // GenBank to EMBL
-        function convertGenBankToEMBL(array) {
-            let id = "", description = "", accession = "", version = "", organism = "", source = "", keywords="";
-            let features = "", origin = "";
+        // GenBank to EMBL
+// GenBank to EMBL
+function convertGenBankToEMBL(array) {
+    let id = "", description = "", accession = "", version = "", organism = "", source = "", keywords = "";
+    let features = "", origin = "";
 
-            array.forEach((line) => {
-                if (line.startsWith("LOCUS")) {
-                    const locusFields = line.split(/\s+/);
-                    id = locusFields[1];  // Taking the second field after LOCUS as ID
-                } else if (line.startsWith("DEFINITION")) {
-                    description += line.replace("DEFINITION", "").trim() + " ";
-                } else if (line.startsWith("ACCESSION")) {
-                    accession = line.split(/\s+/)[1];
-                } else if (line.startsWith("VERSION")) {
-                    version = line.split(/\s+/)[1];
-                } else if (line.startsWith("SOURCE")) {
-                    source += line.replace("SOURCE", "").trim() + " ";
-                } else if (line.startsWith("  ORGANISM")) {
-                    organism += line.replace("ORGANISM", "").trim() + " ";
-                } else if (line.startsWith("KEYWORDS")) {
-                    keywords += line.replace("KEYWORDS", "").trim() + " ";
-                } else if (line.startsWith("FEATURES")) {
-                    let featureStartIndex = array.indexOf(line);
-                    features = parseFeatures(array.slice(featureStartIndex));
-                } else if (line.startsWith("ORIGIN")) {
-                    let originStartIndex = array.indexOf(line) + 1;
-                    origin = parseOrigin(array.slice(originStartIndex));
-                }
-            });
-
-            
-
-            let emblContent = `ID   ${id}; SV 1; linear; genomic DNA; STD; UNC; 123 BP.\n` +
-                              `XX\n` +
-                              `AC   ${accession};\n` +
-                              `XX\n` +
-                              `DE   ${description}\n` +
-                              `XX\n` +
-                              `KW   ${keywords}\n` +
-                              `XX\n` +
-                              `OS   ${organism}\n` +
-                              `XX\n` +
-                              `FT   ${features}\n` +
-                              `XX\n` +
-                              `SQ   Sequence 123 BP; 32 A; 31 C; 30 G; 30 T; 0 other;\n${origin}\n`;
-
-            displayResult(emblContent, `${id}_converted.embl`);
+    array.forEach((line) => {
+        if (line.startsWith("LOCUS")) {
+            const locusFields = line.split(/\s+/);
+            id = locusFields[1];  // Taking the second field after LOCUS as ID
+        } else if (line.startsWith("DEFINITION")) {
+            description += line.replace("DEFINITION", "").trim() + " ";
+        } else if (line.startsWith("ACCESSION")) {
+            accession = line.split(/\s+/)[1];
+        } else if (line.startsWith("VERSION")) {
+            version = line.split(/\s+/)[1];
+        } else if (line.startsWith("SOURCE")) {
+            source += line.replace("SOURCE", "").trim() + " ";
+        } else if (line.startsWith("  ORGANISM")) {
+            organism += line.replace("ORGANISM", "").trim() + " ";
+        } else if (line.startsWith("KEYWORDS")) {
+            keywords += line.replace("KEYWORDS", "").trim() + " ";
+        } else if (line.startsWith("FEATURES")) {
+            let featureStartIndex = array.indexOf(line);
+            features = parseFeatures(array.slice(featureStartIndex));
+        } else if (line.startsWith("ORIGIN")) {
+            let originStartIndex = array.indexOf(line) + 1;
+            origin = parseOrigin(array.slice(originStartIndex));
         }
+    });
+   // console.log(array);
 
-        function parseFeatures(lines) {
-            let features = "";
-            lines.forEach(line => {
-                if (line.startsWith("ORIGIN")) return false; // Break the loop
-                features += line + "\n";
-            });
-            return features.trim();
-        }
 
-        function parseOrigin(lines) {
-            return lines.map(line => line.replace(/\s+\d+\s+/g, '').toUpperCase()).join(' ');
+    // Replace 'Region', 'Site', and remove nucleotide sequences from the features
+    features = features.replace(/Region/g, '')
+                       .replace(/Site/g, '');
+
+    let emblContent = `ID   ${id}; SV 1; linear; genomic DNA; STD; UNC; 123 BP.\n` +
+                      `XX\n` +
+                      `AC   ${accession};\n` +
+                      `XX\n` +
+                      `DE   ${description}\n` +
+                      `XX\n` +
+                      `KW   ${keywords}\n` +
+                      `XX\n` +
+                      `OS   ${organism}\n` +
+                      `XX\n` +
+                      `FT   ${features}\n` +
+                      `XX\n` +
+                      `SQ   Sequence 123 BP; 32 A; 31 C; 30 G; 30 T; 0 other;\n${origin}\n`;
+
+    displayResult(emblContent, `${id}_converted.embl`);
+}
+
+// Modified parseFeatures function to stop before ORIGIN
+function parseFeatures(lines) {
+    let features = "";
+    
+    for (let i = 0; i < lines.length; i++) {
+        let line = lines[i];
+        
+        if (line.startsWith("ORIGIN")) {
+            break; // Stop processing once 'ORIGIN' is found
         }
+        
+        features += line + "\n";
+    }
+    
+    return features.trim(); // Return the features collected before 'ORIGIN'
+}
+
+function parseOrigin(lines) {
+    return lines.map(line => line.replace(/\s+\s+/g, '').toUpperCase()).join(' ');
+}
 
         function displayResult(content, fileName) {
             document.getElementById("result").innerHTML = `
-                <textarea cols="50" id= "textarea" value="textarea" rows="10">${content}</textarea><br>
-                <button onclick="downloadFile('${fileName}')">Download</button>
+                <textarea cols="50" id= "textarea" value="textarea" rows="10">${content}</textarea><br><br>
+                <input type="button" value="Download" onclick="downloadFile('${fileName}')">
             `;
         }
         //EMBL to Genbank
 
         function convertEMBLToGenBank(array) {
-            let locus = "", definition = "", accession = "", version = "", source = "", organism = "";
-            let features = "", keywords = "", origin = "";
+    // Initialize all fields as empty strings
+    let locus = "", definition = "", accession = "", version = "", source = "", organism = "";
+    let features = "", keywords = "", origin = "";
 
-            array.forEach((line) => {
-                if (line.startsWith("ID")) {
-                    locus = line.split(/\s+/)[1].trim();
-                } else if (line.startsWith("DE")) {
-                    definition += line.replace("DE", "").trim() + " ";
-                } else if (line.startsWith("AC")) {
-                    accession += line.replace("AC", "").trim();
-                } else if (line.startsWith("SV")) {
-                    version += line.replace("SV", "").trim();
-                } else if (line.startsWith("OS")) {
-                    source += line.replace("OS", "").trim() + " ";
-                } else if (line.startsWith("OC")) {
-                    organism += line.replace("OC", "").trim() + " ";
-                } else if (line.startsWith("FT")) {
-                    features += line.replace("FT", "").trim() + "\n";
-                } else if (line.startsWith("KW")) {
-                    keywords += line.replace("KW", "").trim() + "\n";
-                } else if (line.startsWith("SQ")) {
-                    origin = parseOrigin1(array.slice(array.indexOf(line) + 1));
-                }
-            });
+    // Flag to indicate if we are in the SQ section
+    let inSQ = false;
+    let sequenceLines = [];
 
-            let genbankContent = `LOCUS       ${locus}\nDEFINITION  ${definition.trim()}\nACCESSION   ${accession.trim()}\nVERSION     ${version.trim()}\nSOURCE      ${source.trim()}\nORGANISM      ${organism.trim()}\nKEYWORDS       ${keywords}\n ${features}\nORIGIN\n${origin}\n//`;
-
-            displayResult(genbankContent, `${locus}_converted_file`);
+    array.forEach((line) => {
+        if (line.startsWith("ID")) {
+            // Example: ID   SCU49845; SV 1; linear; mRNA; STD; PLN; 5028 BP.
+            // Extract the first token after "ID"
+            locus = line.split(/\s+/)[1].replace(';', '').trim();
+        } else if (line.startsWith("DE")) { 
+            // DE   Description line
+            definition += line.substring(2).trim() + " ";
+        } else if (line.startsWith("AC")) {
+            // AC   Accession numbers
+            accession += line.substring(2).replace(/;/g, '').trim() + " ";
+        } else if (line.startsWith("SV")) {
+            // SV   Sequence version
+            version += line.substring(2).replace(/;/g, '').trim() + " ";
+        } else if (line.startsWith("OS")) {
+            // OS   Organism species
+            source += line.substring(2).trim() + " ";
+        } else if (line.startsWith("OC")) {
+            // OC   Organism classification
+            organism += line.substring(2).trim() + " ";
+        } else if (line.startsWith("FT")) {
+            // FT   Features
+            features += line.substring(2).trim() + " ";
+        } else if (line.startsWith("KW")) {
+            // KW   Keywords
+            keywords += line.substring(2).replace(/;/g, '').trim() + " ";
+        } else if (line.startsWith("SQ")) {
+            // Start of the sequence section
+            inSQ = true;
+        } else if (inSQ) {
+            if (line.startsWith("//")) {
+                // End of the sequence section
+                inSQ = false;
+            } else {
+                // Collect sequence lines
+                sequenceLines.push(line);
+            }
         }
-        function parseOrigin1(sequenceLines) {
-            return sequenceLines.join('').replace(/[\d\s\/]/g, '').toUpperCase().match(/.{1,60}/g).join('\n');
-        }
+    });
+
+    // Parse the origin sequence
+    origin = parseOrigin(sequenceLines);
+
+    // Construct the GenBank content
+    let genbankContent = 
+`LOCUS       ${locus}
+DEFINITION  ${definition.trim()}
+ACCESSION   ${accession.trim()}
+VERSION     ${version.trim()}
+SOURCE      
+  ORGANISM  ${organism.trim()}
+            ${source.trim()}
+FEATURES    ${features.trim()}
+KEYWORDS    ${keywords.trim()}
+ORIGIN
+${origin}
+//`;
+
+    // Display or handle the GenBank content as needed
+    displayResult(genbankContent, `${locus}_converted_file`);
+}
+
+function parseOrigin(sequenceLines) {
+    let origin = "";
+    let sequence = "";
+
+    // Concatenate all sequence lines into a single string
+    sequenceLines.forEach(line => {
+        // Remove all numbers and spaces
+        let cleanedLine = line.replace(/[0-9]/g, '').replace(/\s+/g, '').toUpperCase();
+        sequence += cleanedLine;
+    });
+
+    // Split the sequence into lines of 60 bases
+    const lineLength = 60;
+    for (let i = 0; i < sequence.length; i += lineLength) {
+        let chunk = sequence.substring(i, i + lineLength);
+        // Line numbers start at 1 and increment by 60
+        // Adjust padding as needed (GenBank typically uses 9 characters for line numbers)
+        origin += `${String(i + 1).padStart(9, ' ')} ${chunk}\n`;
+    }
+
+    return origin;
+}
+
+/*function displayResult(content, filename) {
+    // Example implementation: log to console
+    console.log(`Generated GenBank File (${filename}):\n`);
+    console.log(content);
+
+    // Alternatively, implement file download or other handling as required
+    // For example, in a browser environment, you could trigger a download:
+    
+    const blob = new Blob([content], { type: 'text/plain' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = `${filename}.txt`;
+    link.click();
+    
+}*/
+
+    
         //embl to fasta
 
         function convertEMBLToFASTA(array) {
             const idLine = array.find(line => line.startsWith('ID'));
             const sequenceStartIndex = array.findIndex(line => line.startsWith('SQ'));
-            let id = idLine.split(/\s+/)[1].trim();
+            let id = idLine.replace('ID','');
             let sequence = array.slice(sequenceStartIndex + 1).join('').replace(/[\d\s\/]/g, '').toUpperCase();
 
             let fastaFormat = `>${id}\n${sequence}`;
             displayResult(fastaFormat, `${id}_converted.fasta`);
         }
+
+        
+
 
         function downloadFile(fileName) {
     // Get the content from the second textarea (the result textarea)
